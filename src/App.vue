@@ -20,7 +20,7 @@
             <label for="exampleFormControlInput1" class="form-label"><b>
                 <BIconFiles style="vertical-align:text-top;" class="icon" />本元件將所連結之PDF檔進行特定角度的翻轉。
               </b></label>
-              <ayx data-ui-props='{type:"FileBrowse", widgetId:"pdf_path", browseType:"File"}'></ayx>
+            <ayx data-ui-props='{type:"FileBrowse", widgetId:"pdf_path", browseType:"File", fileTypeFilters: "PDF Files (*.pdf)|*.pdf"}'></ayx>
           </div>
         </div>
 
@@ -39,13 +39,23 @@
 
         <!-- 第三步 -->
         <div class="card" style="margin-top:10px;">
-          <div class="card-header d-flex justify-content-between align-items-center"><b>Step2：請輸入頁數：</b></div>
+          <div class="card-header d-flex justify-content-between align-items-center"><b>Step3：請選擇待處理頁數</b></div>
           <div class="card-body" style="overflow-x:auto;">
-            <label for="exampleFormControlInput1" class="form-label"><b>
-                <BIconColumns style="vertical-align:text-top;" class="icon" /> 跨頁數請用","分隔，如:1,3,5。 某範圍頁數可用 "-" 表示，如:1-3。
-                亦可搭配使用，如:1-3,5,7
-              </b></label>
-            <input type="text" class="form-control" placeholder="輸入頁數" v-model="pdf_page">
+            <div class="form-check mb-3">
+              <input type="checkbox" class="form-check-input" v-model="pdf_isToDoAll" />
+              <label for="exampleFormControlInput1" class="form-check-label"><b>
+                  處理所有頁數
+                </b></label>
+            </div>
+            <div class="mb-3" v-if="pdf_isToDoAll === false">
+              <label for="exampleFormControlInput1" class="form-label"><b>
+                  <BIconColumns style="vertical-align:text-top;" class="icon" /> 跨頁數請用","分隔，如:1,3,5。 某範圍頁數可用 "-"
+                  表示，如:1-3。
+                  亦可搭配使用，如:1-3,5,7
+                </b></label>
+              <input type="text" id="exampleFormControlInput1" class="form-control" placeholder="輸入頁數"
+                v-model="pdf_page">
+            </div>
           </div>
         </div>
 
@@ -94,6 +104,7 @@ export default {
     return {
       pdf_page: "",
       rotate_angle: "",
+      pdf_isToDoAll: true,
       str_columns: [],
       val_columns: [],
       angle_list: [
@@ -116,21 +127,47 @@ export default {
       deep: true
     },
     pdf_page: {
-      handler(val) {
+      handler(newVal, oldVal) {
+        if (!newVal) {
+          return
+        }
+        let inputStr = newVal.replaceAll(" ", "")
+        let pageArray = inputStr.split(',')
+
+        // 頁數檢查
+        pageArray.map(page => {
+          //判斷是否為數字或"-"
+          if (isNaN(page.replaceAll("-", "")) == true || page.includes('.')) {
+            console.log(page)
+            alert("頁數必須為數字")
+            this.pdf_page = oldVal
+            return;
+          }
+          if (page.includes('-')) {
+            //判斷是否輸入多個'-'
+            let count = (page.match(/-/g)).length;
+            if (count > 1) {
+              alert("不可輸入多個'-'字元")
+              this.pdf_page = oldVal
+              return;
+            }
+          }
+        })
+
         if (typeof window.Alteryx !== 'undefined') {
-          window.Alteryx.Gui.Manager.getDataItem("pdf_page").setValue(val)
+          window.Alteryx.Gui.Manager.getDataItem("pdf_page").setValue(newVal)
         }
       },
       deep: true
     },
-    // pdf_path:{
-    //   handler(val) {
-    //     if (typeof window.Alteryx !== 'undefined') {
-    //       window.Alteryx.Gui.Manager.getDataItem("pdf_path").setValue(val)
-    //     }
-    //   },
-    //   deep: true
-    // }
+    pdf_isToDoAll: {
+      handler(val) {
+        if (typeof window.Alteryx !== 'undefined') {
+          window.Alteryx.Gui.Manager.getDataItem("pdf_isToDoAll").setValue(val)
+        }
+      },
+      deep: true
+    }
   },
   mounted() {
     if (typeof window.Alteryx !== 'undefined') {
@@ -147,6 +184,8 @@ export default {
           manager.addDataItem(rotate_angle)
           var pdf_page = new AlteryxDataItems.SimpleString('pdf_page')
           manager.addDataItem(pdf_page)
+          var pdf_isToDoAll = new AlteryxDataItems.SimpleBool('pdf_isToDoAll')
+          manager.addDataItem(pdf_isToDoAll)
           var pdf_path = new AlteryxDataItems.SimpleString('pdf_path')
           manager.addDataItem(pdf_path)
           // Bind to Checkbox widget
@@ -157,6 +196,7 @@ export default {
           //Set WorkflowDirectory
           this.rotate_angle = manager.getDataItem("rotate_angle").getValue()
           this.pdf_page = manager.getDataItem("pdf_page").getValue()
+          this.pdf_isToDoAll = manager.getDataItem("pdf_isToDoAll").getValue()
           //Load Income Field
           // let str_type = ["String", "WString", "V_String", "V_WString", "Date", "Time", "DateTime"]
           // let val_type = ["Byte", "Int16", "Int32", "Int64", "FixedDecimal", "Float", "Double"]
