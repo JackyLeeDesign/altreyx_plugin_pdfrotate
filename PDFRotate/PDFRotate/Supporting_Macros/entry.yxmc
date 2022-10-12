@@ -16,7 +16,7 @@
     </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="150" y="270" />
+        <Position x="186" y="270" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -49,39 +49,9 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
     </Node>
-    <Node ToolID="4">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
-        <Position x="330" y="282" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <FormulaFields>
-            <FormulaField expression="Replace(ToString([input_path]), &quot;.pdf&quot;, &quot;_rotated.pdf&quot;)" field="output_path" size="1073741823" type="V_WString" />
-          </FormulaFields>
-        </Configuration>
-        <Annotation DisplayMode="2">
-          <Name />
-          <AnnotationText><![CDATA[根據輸入路徑, 產生輸出路徑, 原檔名下加上_rotate
-]]></AnnotationText>
-          <DefaultAnnotationText><![CDATA[output_path = Replace(ToString([input_path]), ".pdf", "_rotated.pdf")
-]]></DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="input_rotate" source="TextInput:" type="Byte" />
-            <Field name="input_page" source="TextInput:" type="Byte" />
-            <Field name="input_isTodoAll" source="TextInput:" type="Bool" />
-            <Field name="input_path" size="40" source="TextInput:" type="WString" />
-            <Field name="output_path" size="1073741823" source="Formula: Replace(ToString([input_path]), &quot;.pdf&quot;, &quot;_rotated.pdf&quot;)" type="V_WString" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
-    </Node>
     <Node ToolID="5">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="162" y="150" width="59" height="59" />
+        <Position x="198" y="150" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -94,7 +64,7 @@
     </Node>
     <Node ToolID="6">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="306" y="150" width="59" height="59" />
+        <Position x="342" y="150" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -107,7 +77,7 @@
     </Node>
     <Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="498" y="258" />
+        <Position x="486" y="258" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -124,7 +94,7 @@
     </Node>
     <Node ToolID="8">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-        <Position x="150" y="54" width="59" height="59" />
+        <Position x="186" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -137,7 +107,7 @@
     </Node>
     <Node ToolID="9">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-        <Position x="294" y="54" width="59" height="59" />
+        <Position x="330" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -150,7 +120,7 @@
     </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="246" y="282" />
+        <Position x="282" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -183,7 +153,7 @@
     </Node>
     <Node ToolID="14">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
-        <Position x="54" y="54" width="59" height="59" />
+        <Position x="90" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -196,7 +166,7 @@
     </Node>
     <Node ToolID="16">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="66" y="150" width="59" height="59" />
+        <Position x="102" y="150" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -209,7 +179,7 @@
     </Node>
     <Node ToolID="17">
       <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="150" y="342" />
+        <Position x="186" y="342" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -238,21 +208,20 @@
     </Node>
     <Node ToolID="19">
       <GuiSettings Plugin="JupyterCode">
-        <Position x="414" y="282" />
+        <Position x="390" y="282" />
       </GuiSettings>
       <Properties>
         <Configuration>
           <WorkflowName>c:\users\jykl\desktop\alteryx\altreyx_ait_components\altreyx_plugin_pdfrotate\alteryx_src\supporting_macros\entry.yxmc</WorkflowName>
-          <JupyterProduction>false</JupyterProduction>
+          <JupyterProduction>true</JupyterProduction>
           <vEnvName>jupytertool_venv</vEnvName>
           <DefaultVenv>1</DefaultVenv>
           <productionModeScript>#################################
 # List all non-standard packages to be imported by your 
 # script here (only missing packages will be installed)
 from ayx import Package
-Package.installPackages(['pandas','numpy'])
-if Package.isPackageInstalled("PyPDF2") == False:
-    Package.installPackages(['PyPDF2'])
+
+Package.installPackages(package=['pandas','PyPDF2'], install_type="install --user")
 
 
 #################################
@@ -260,37 +229,107 @@ from ayx import Alteryx
 import pandas as pd
 from PyPDF2 import PdfReader
 from PyPDF2 import PdfWriter
-
+import os
 pdf_list = Alteryx.read("#1")
 
 try:
-    reader = PdfReader(pdf_list["input_path"].iloc[0], 'rb')
+    input_page = pdf_list['input_page'].iloc[0]
+    input_rotate = pdf_list['input_rotate'].iloc[0]
+    input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]
+    input_path = pdf_list['input_path'].iloc[0]
+    file = os.path.splitext(input_path)[0]
+    ext = os.path.splitext(input_path)[1]   
+    reader = PdfReader(input_path, 'rb')
     writer = PdfWriter()
-    # page = reader.pages[0]
-    # print(page.extract_text())
 
-    for pageNum in range(reader.numPages):
-        page = reader.getPage(pageNum)
-        page.rotateClockwise(90)
-        writer.addPage(page)
+    arrangeInputData = str(input_page).replace(" ","").split(",")
+    isTodoAll = input_isTodoAll
+    rotate = input_rotate
+    toDoPage=[]
+
+    if(isTodoAll):
+            for pageNum in range(reader.numPages):
+                page = reader.getPage(pageNum)
+                page.rotateClockwise(rotate)
+                writer.addPage(page)
+    else:
+        # 分析待處理頁數，將1-3拆成1,2,3
+        for index in range(len(arrangeInputData)):
+            if(len(str(arrangeInputData[index]))==0):
+                continue
+            if('-' in str(arrangeInputData[index])):
+                startAndEndPage = str(arrangeInputData[index]).split('-')
+                startPage = ""
+                endPage = ""
+                # 起始頁與結束頁未輸入時, 始頁自動更改為第一頁, 結束頁自動取pdf最後一頁
+                if(len(str(startAndEndPage[0]))==0):
+                    startAndEndPage[0]=1
+                if(len(str(startAndEndPage[1]))==0):
+                    startAndEndPage[1]=reader.numPages
+
+                # 判斷起始頁和結束頁
+                if(int(startAndEndPage[0])&lt;int(startAndEndPage[1])):
+                    startPage = startAndEndPage[0]
+                    endPage = startAndEndPage[1]
+                else:
+                    startPage = startAndEndPage[1]
+                    endPage = startAndEndPage[0]
+                
+                # 展開並寫入至待處理頁數
+                for addPageNum in range(int(startPage),int(endPage)+1):
+                    # 頁數字串轉數字
+                    toDoPage.append(int(addPageNum))
+            else:
+                toDoPage.append(int(arrangeInputData[index]))
+        
+        # 頁數字串轉數字
+        for index in range(len(toDoPage)):
+            toDoPage[index] = int(toDoPage[index])
+
+        # 去除重複頁數
+        toDoPage = list(set(toDoPage))
+
+        print(toDoPage)
+
+        # 獲取最大頁數
+        maxPageNum = max(toDoPage)
+
+        # 判斷輸入頁數是否超過檔案頁數
+        if(maxPageNum &gt; reader.numPages):
+            raise Exception("您輸入的頁數已超過檔案最大頁數，請更改頁數範圍後再執行")
+
+        # 處理指定頁數 
+        for pageNum in range(reader.numPages):
+            page = reader.getPage(pageNum)
+            if((pageNum+1) in toDoPage):
+                page.rotateClockwise(rotate)
+            writer.addPage(page)
 
     # pdfWriter.encrypt(password)
-    newPath = pdf_list["output_path"].iloc[0]
-    pdfOut = open(newPath, 'wb')
+    output_path = f'{file}_rotated{ext}'
+    i = 2
+    while os.path.exists(output_path):
+        output_path = f'{file}_rotated{i}{ext}'
+        i += 1
+
+    pdfOut = open(output_path, 'wb')
     writer.write(pdfOut)
     pdfOut.close()
-    pdf_list["success"].iloc[0] = "Success：" + pdf_list["output_path"].iloc[0]
-    Alteryx.write(pdf_list,1)
+    pdf_list["status"] = "Success"
+    print("Success")
 except Exception as e:
-    pdf_list["success"].iloc[0] = "Failure：" + e
-    Alteryx.write(pdf_list,1)
+    pdf_list["status"] = "Failure：" + str(e)
+    print("Failure：" + str(e))
+Alteryx.write(pdf_list,1)
 
+
+#################################
 </productionModeScript>
-          <Port>63348</Port>
+          <Port>55245</Port>
           <JupyterGuidDir>7640bca0-2c13-4d2c-8f32-4b068e3c7c0c</JupyterGuidDir>
           <JupyterGuidCopy />
           <LastExecutedByEngineVersion>2020.4.5.12471</LastExecutedByEngineVersion>
-          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","Package.installPackages(package=['pandas','PyPDF2'], install_type=\"install --user\")"]},{"cell_type":"code","execution_count":2,"metadata":{"scrolled":false},"outputs":[],"source":["from ayx import Alteryx\n","import pandas as pd\n","from PyPDF2 import PdfReader\n","from PyPDF2 import PdfWriter\n","\n","pdf_list = Alteryx.read(\"#1\")\n","\n","try:\n","    input_page = pdf_list['input_page'].iloc[0]\n","    input_rotate = pdf_list['input_rotate'].iloc[0]\n","    input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]\n","    output_path = pdf_list['output_path'].iloc[0]\n","    reader = PdfReader(pdf_list['input_path'].iloc[0], 'rb')\n","    writer = PdfWriter()\n","\n","    arrangeInputData = str(input_page).replace(\" \",\"\").split(\",\")\n","    isTodoAll = input_isTodoAll\n","    rotate = input_rotate\n","    toDoPage=[]\n","\n","    if(isTodoAll):\n","            for pageNum in range(reader.numPages):\n","                page = reader.getPage(pageNum)\n","                page.rotateClockwise(rotate)\n","                writer.addPage(page)\n","    else:\n","        # 分析待處理頁數，將1-3拆成1,2,3\n","        for index in range(len(arrangeInputData)):\n","            if(len(str(arrangeInputData[index]))==0):\n","                continue\n","            if('-' in str(arrangeInputData[index])):\n","                startAndEndPage = str(arrangeInputData[index]).split('-')\n","                startPage = \"\"\n","                endPage = \"\"\n","                # 起始頁與結束頁未輸入時, 始頁自動更改為第一頁, 結束頁自動取pdf最後一頁\n","                if(len(str(startAndEndPage[0]))==0):\n","                    startAndEndPage[0]=1\n","                if(len(str(startAndEndPage[1]))==0):\n","                    startAndEndPage[1]=reader.numPages\n","\n","                # 判斷起始頁和結束頁\n","                if(int(startAndEndPage[0])<int(startAndEndPage[1])):\n","                    startPage = startAndEndPage[0]\n","                    endPage = startAndEndPage[1]\n","                else:\n","                    startPage = startAndEndPage[1]\n","                    endPage = startAndEndPage[0]\n","                \n","                # 展開並寫入至待處理頁數\n","                for addPageNum in range(int(startPage),int(endPage)+1):\n","                    # 頁數字串轉數字\n","                    toDoPage.append(int(addPageNum))\n","            else:\n","                toDoPage.append(int(arrangeInputData[index]))\n","        \n","        # 頁數字串轉數字\n","        for index in range(len(toDoPage)):\n","            toDoPage[index] = int(toDoPage[index])\n","\n","        # 去除重複頁數\n","        toDoPage = list(set(toDoPage))\n","\n","        print(toDoPage)\n","\n","        # 獲取最大頁數\n","        maxPageNum = max(toDoPage)\n","\n","        # 判斷輸入頁數是否超過檔案頁數\n","        if(maxPageNum > reader.numPages):\n","            raise Exception(\"您輸入的頁數已超過檔案最大頁數，請更改頁數範圍後再執行\")\n","\n","        # 處理指定頁數 \n","        for pageNum in range(reader.numPages):\n","            page = reader.getPage(pageNum)\n","            if((pageNum+1) in toDoPage):\n","                page.rotateClockwise(rotate)\n","            writer.addPage(page)\n","\n","    # pdfWriter.encrypt(password)\n","    newPath = output_path\n","    pdfOut = open(newPath, 'wb')\n","    writer.write(pdfOut)\n","    pdfOut.close()\n","    pdf_list[\"status\"] = \"Success\"\n","    print(\"Success\")\n","except Exception as e:\n","    pdf_list[\"status\"] = \"Failure：\" + str(e)\n","    print(\"Failure：\" + str(e))\n","Alteryx.write(pdf_list,1)"]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]}],"metadata":{"kernelspec":{"display_name":"jupytertool_venv","language":"python","name":"jupytertool_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","\n","Package.installPackages(package=['pandas','PyPDF2'], install_type=\"install --user\")"]},{"cell_type":"code","execution_count":2,"metadata":{"scrolled":false},"outputs":[],"source":["from ayx import Alteryx\n","import pandas as pd\n","from PyPDF2 import PdfReader\n","from PyPDF2 import PdfWriter\n","import os\n","pdf_list = Alteryx.read(\"#1\")\n","\n","try:\n","    input_page = pdf_list['input_page'].iloc[0]\n","    input_rotate = pdf_list['input_rotate'].iloc[0]\n","    input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]\n","    input_path = pdf_list['input_path'].iloc[0]\n","    file = os.path.splitext(input_path)[0]\n","    ext = os.path.splitext(input_path)[1]   \n","    reader = PdfReader(input_path, 'rb')\n","    writer = PdfWriter()\n","\n","    arrangeInputData = str(input_page).replace(\" \",\"\").split(\",\")\n","    isTodoAll = input_isTodoAll\n","    rotate = input_rotate\n","    toDoPage=[]\n","\n","    if(isTodoAll):\n","            for pageNum in range(reader.numPages):\n","                page = reader.getPage(pageNum)\n","                page.rotateClockwise(rotate)\n","                writer.addPage(page)\n","    else:\n","        # 分析待處理頁數，將1-3拆成1,2,3\n","        for index in range(len(arrangeInputData)):\n","            if(len(str(arrangeInputData[index]))==0):\n","                continue\n","            if('-' in str(arrangeInputData[index])):\n","                startAndEndPage = str(arrangeInputData[index]).split('-')\n","                startPage = \"\"\n","                endPage = \"\"\n","                # 起始頁與結束頁未輸入時, 始頁自動更改為第一頁, 結束頁自動取pdf最後一頁\n","                if(len(str(startAndEndPage[0]))==0):\n","                    startAndEndPage[0]=1\n","                if(len(str(startAndEndPage[1]))==0):\n","                    startAndEndPage[1]=reader.numPages\n","\n","                # 判斷起始頁和結束頁\n","                if(int(startAndEndPage[0])<int(startAndEndPage[1])):\n","                    startPage = startAndEndPage[0]\n","                    endPage = startAndEndPage[1]\n","                else:\n","                    startPage = startAndEndPage[1]\n","                    endPage = startAndEndPage[0]\n","                \n","                # 展開並寫入至待處理頁數\n","                for addPageNum in range(int(startPage),int(endPage)+1):\n","                    # 頁數字串轉數字\n","                    toDoPage.append(int(addPageNum))\n","            else:\n","                toDoPage.append(int(arrangeInputData[index]))\n","        \n","        # 頁數字串轉數字\n","        for index in range(len(toDoPage)):\n","            toDoPage[index] = int(toDoPage[index])\n","\n","        # 去除重複頁數\n","        toDoPage = list(set(toDoPage))\n","\n","        print(toDoPage)\n","\n","        # 獲取最大頁數\n","        maxPageNum = max(toDoPage)\n","\n","        # 判斷輸入頁數是否超過檔案頁數\n","        if(maxPageNum > reader.numPages):\n","            raise Exception(\"您輸入的頁數已超過檔案最大頁數，請更改頁數範圍後再執行\")\n","\n","        # 處理指定頁數 \n","        for pageNum in range(reader.numPages):\n","            page = reader.getPage(pageNum)\n","            if((pageNum+1) in toDoPage):\n","                page.rotateClockwise(rotate)\n","            writer.addPage(page)\n","\n","    # pdfWriter.encrypt(password)\n","    output_path = f'{file}_rotated{ext}'\n","    i = 2\n","    while os.path.exists(output_path):\n","        output_path = f'{file}_rotated{i}{ext}'\n","        i += 1\n","\n","    pdfOut = open(output_path, 'wb')\n","    writer.write(pdfOut)\n","    pdfOut.close()\n","    pdf_list[\"status\"] = \"Success\"\n","    print(\"Success\")\n","except Exception as e:\n","    pdf_list[\"status\"] = \"Failure：\" + str(e)\n","    print(\"Failure：\" + str(e))\n","Alteryx.write(pdf_list,1)"]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]}],"metadata":{"kernelspec":{"display_name":"jupytertool_venv","language":"python","name":"jupytertool_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -302,7 +341,7 @@ except Exception as e:
     </Node>
     <Node ToolID="20">
       <GuiSettings Plugin="AlteryxGuiToolkit.Error.Error">
-        <Position x="18" y="246" width="59" height="59" />
+        <Position x="54" y="246" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -316,7 +355,7 @@ except Exception as e:
     </Node>
     <Node ToolID="21">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-        <Position x="450" y="54" width="59" height="59" />
+        <Position x="486" y="54" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -329,7 +368,7 @@ except Exception as e:
     </Node>
     <Node ToolID="22">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="462" y="150" width="59" height="59" />
+        <Position x="498" y="150" width="59" height="59" />
       </GuiSettings>
       <Properties>
         <Configuration />
@@ -349,10 +388,6 @@ except Exception as e:
     <Connection>
       <Origin ToolID="17" Connection="Output" />
       <Destination ToolID="11" Connection="Source" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="4" Connection="Output" />
-      <Destination ToolID="19" Connection="Input" />
     </Connection>
     <Connection name="#1">
       <Origin ToolID="5" Connection="Action" />
@@ -390,9 +425,9 @@ except Exception as e:
       <Origin ToolID="9" Connection="Question" />
       <Destination ToolID="6" Connection="Question" />
     </Connection>
-    <Connection>
+    <Connection name="#1">
       <Origin ToolID="11" Connection="Output" />
-      <Destination ToolID="4" Connection="Input" />
+      <Destination ToolID="19" Connection="Input" />
     </Connection>
     <Connection name="#1">
       <Origin ToolID="14" Connection="Question" />
