@@ -1,513 +1,463 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <AlteryxDocument yxmdVer="2020.4">
+
+  <EncryptedData>AAAAANhpfLPE9syhgt83IqhbZkWH4IOADAeqVqvaLBIBEjpt+o89Cux5KzvStxR7Tg+ztJkpYnS2&#xD;
+W1wqO14BTazvx31xVtuPd8K5SVN8nW192kuN/ln+usvWbfwoNcT26XsZimKq6IHpGEPiXbYiRCwO&#xD;
+QCuOj26sNjmKMMHRgrb+0wlecbhHFowF3bJ014QYM6rscnborQP9UtKb+YwO35E8tZYpr7LUvNv7&#xD;
+wO9D+lIzpC3+1RLG+8/jN+a8jtmRi8sxHLuqNCLFJKhH+IMpUO7jigGJ29SrhmRB/WTlxZAPqG77&#xD;
+jMLmiA6Punw+RXWOtmzFraz6DVytnDO2sEeMVheP5Jb0LzZhJa9E/QmXParri5X/g8uFeaXdMS+M&#xD;
+6GP7NSIo8z6oGliGWPbZUpxTjrKLrs+FGc4J/clUqiJMkUit3zSivkCzc5mg5Q0/bY8DSu43Yz9V&#xD;
+AJOp96AQCuj6O/cFbZ8tV27W6OV7Ki26IhbOmCDESBrV3OdbK4zPQY7eETt1sbnp+Keof3uImrh6&#xD;
+o9OoofBldbRm+H4FaEA3oQKKWvG8sxM8ZdmEXhBPKXbN3FxxQcywp0xUrUnRkeEUQuRZUL26pH7g&#xD;
+NgaASGwOtIy6tTIYAWQNkcofDDl95uvFLDXkwZVzLtZsLUb+GRXjCM6lCTOZV3TbIaJV+aVP02Tm&#xD;
+U4wsUrnlCJnHChaihscQ6MCTL6tyoR/oWOdxT+J4rhP0HTUWPWxR6b16ojUj4wY+OR5svfMynHSv&#xD;
+mGrohrKBYUdLUug2LTEOwGyP+i7zNILDIxlfx24ydqN2Sw0nE1RB5YEL6Q53M0dE3I5S44rH4ZBT&#xD;
+MTPrG7FHdMBcsTFeydl7fxLcdqvhtYig7kxi8FQFsqQxpf8XEt/HGvdqvgVvJ4srnVu6gHw4QNuP&#xD;
+7QjhcOPWl+5qYrCu19JV40GiUwRsKUrCJZYVpO6+8palg6rWMcX1RKQY4lzJ+Uzx5eNp+w1+NY/+&#xD;
+Y86TpTmqI4t3XOhsCZpzC1/u9KFLsmc8f+77PZjU0BsGCWgyleImTvUJerj/lGhCva5lXY2ke1d3&#xD;
+sBWBU6uS+/AQh0hq2z3+dJ7wiw6SrRjROIIjSdkZLgLbbDLC1UzpH4m1VcxP2Hant6NTQ1og46al&#xD;
+V7eBrvmiMFZE4a0mArBjjqIivBqoRveYD9nN6f7Ju6J+YAdVOOkji+YZD//Mzn/NEKfXLkqSZEKL&#xD;
+KOntBo0xbQGHsDBLsqmI3G6sX6/pAOaj8UKGJz3Daw4qhzY0+XuzsoDXEmhuBZNIE8uEDbSDRcoq&#xD;
+PvI++FSnudODJ1zuej2VECFC/jyYJokQRPcTxa9UWqoqx66YaUP+ufWd7PUmTCOQnsP6qEbHlnk5&#xD;
+gqARMSd4YPsFbOpnxEKCTKKSYTrXWxbYm7zSJ8fWxGmIKcsR2M8vHYQLEVYgw42jwy08IToS+KIF&#xD;
+JwJO9jkptH0uZvDsrebKka4ZbDFl6vx5EIj8mQsIdiidMVtCV1clgP0V7J2rLvKZRpRK2bayml3N&#xD;
+qVAgZiGUw7dMu9OHYaMZbE73KQxkE99SmuK96fmGFDOHQlVCdA5h+V8IigC64d1y1Ody2vLTWlm0&#xD;
+/TYP4CrdHN9ARkhmde4kOpwDJxZ4PZ2UogCr+9PyE3CklIJJhFFszWjoS4GXjpvtOoruesqmJCTs&#xD;
+TL5k8Jh6rhgzeBZnlNWyQ1jm3/iKOHYNWwnnqTAKcO4HnD7NArjyOloWM36gzP1/+yPJQ+jAqeFP&#xD;
+VjhVOQMXgoibh9dSHfAfiiTUHTER8wlfJCDw5L/UcbKrGJyjTiS95/zgiTReTPfzr1GWuRU9NCFF&#xD;
+Z0g4MZipnOGODaKyMDq7BGg8K1dC5EewgVAv7yK7pJvsr1xBh8/QE8XLMqq6MCTvQfKSZ3yolcL1&#xD;
+x7u1CqSUze6qK3i7hYVK3CdFRcRiz+PdB2Fm9k8XApsLiSdJ5mVRYy0IsilhNDCP/vyfJqejH2/7&#xD;
+PdtVTLY2Xp0wwYydSicgC+MVFOhb+Y1utZz9x8ese7WWm8RDIEeNMv5HhUhSjhtKJPxu4qqQRvWA&#xD;
+9sYhz45UmwWeBw0cz1VaDYW37iDsNMk8APlg47PU6XkjrNAzuySFtmzkAlKX0CfglTlQDaK2tCVz&#xD;
+ngHrxdwwGbUS1vtj6kpD2NPGNL6aJX+SUw8HLPh2KsOr5hRIE8jUU4sv0NaTKVt2vNDY1MsL6QQK&#xD;
+SFQ/TUaM8MM05c7n1qP87FxyG7RJoxspWeoLMmXn0VUwXF8kfTWlsqgIhq2YoPSP7HsBFB6F3ePd&#xD;
+W3KtXsgmeaughQ319VeKDYE46zxmJ1pO+jbKTcR0XfJSk/5Yn5jzK/Jc79OWfM+kcP9PjoVNHJco&#xD;
+SMRnJXOmAR0j7ySnE3EShUNgsR3htpy4gNFBzWU7bzH6EaC8y+tHAgq0zahLf8NNvSf4kklEKg5+&#xD;
+TkRv5dYsc9iUGhDD+tLDdO4oMYwZgDBp5r0s0oxIPp+L6YYoKEQBIn07zgSPPA4X4wcr4hCqArlW&#xD;
+dNOiuZe1Dn2NgdHKdJtcZd7KHUgFMgeZ8z7YPiyTKb+jfE3zeJR532wAVcc8BJcMEhZTM4DWJYJj&#xD;
+uKT5sjjtQi8NVGHx78q4UkZtpVNdx9QkC2WDCPAlbojhShkuAIov+dWWZ7Ac/h1wFFrlv309O7dY&#xD;
+areS8ZMl72K/vzUubc17VDgSZ96AKK0DM4Op1vP/U3q+Usky0ZV652so8jvCcXiHtTvYOCoXlWE8&#xD;
+XF50zIoY/klgi8y2tgJtQ5Frbe7MxGrg+yq06kpY9CNQ/pdQSCiS7iZMmOtEy6gd0mKWotOCzVjN&#xD;
+hSaVuLJT8V8DmhuVrat6ZSZ+JlU/DEXLgE7vYmvawyIn2rYqiuJrISCagaBd/c2rWjxaiQIYVCn4&#xD;
+E5fitXfTYKxlkBxJlLS2V0d0bErLZY1Ne762a5UUj5W5AjK5BcN2ngtiFPRCThV4QZlI3dq/NB7D&#xD;
+I76rWxsn9wYpPz5/LiOTdz65OtLgk86TEKJwLVwVfRjKZNsT8iFh9MtUunpTX+6Qx2HUerKDZz0Q&#xD;
+LDrksbkJvxYf5WZuZdk0SUl9noSnQHU1pFn1HvCRj8DC9C1nBzG1PMaPmCt2E0nGzVGwM3Ra0h5m&#xD;
+fCsS7a+4tBchEEUh9SDqy3U8UbY1Zho/IC0h7vLZfWIt21xGaaMcyHWA7HaIYHH1mpveGey76g/T&#xD;
+eqNVZ9g33kUM01Rerqpes9pYC95lE/Wj1ZAWCptqTxpgf0ie/UrCTqdOI5vmfji9AsjN1TlL3OBy&#xD;
+odtXvg44pvF21Eko8n1gBNDkGR8SwVgyjXfLk7AAE2fTl9LbIjQeLgfk48zy/wC84W83S6fv8vJv&#xD;
+GScXvnIC0lMNXPLhhJPOW78OgfbrrEVMBnwg9nqaO7QkbLZKKir6P1aSywNmGu3ioBFJ+ScmE6tj&#xD;
+WhVWSGf/AUUE+IsX6iCxwT2KhYK8UF+L2Lon+3UP6EN4jXoJz//7enVrKljH7Txoo73kp3D4xs/E&#xD;
+sviZTNyb8LkdCF4J47zSY+P+AEYyXJZQRkZHtsovDBcQ/cqdFMS41OAPJf/pyzZ296zKD+w2Gkhx&#xD;
+suMF68ymXgmd1EkoOQUSj0wk2QQuPmsyKXvkCMrucMjaCcDl9OH3V/1IZOcntUwST2ZpUkBbXr3E&#xD;
+sKuIbgopfJHHt1pceLW2G4DlPXb/iHBS7KSGTSNmpevXSQBZTevwAQzrFvwMgnfKS8r8rX0MNI9+&#xD;
+IYDBuz280NC8/4JHyFKNfE0Rt7bw/RALQjzosJhgCwKXyye+d5wzOWtG7gPhtJcjeaR6kEYHGVQ3&#xD;
+7EZZsOhSG901R9MFdzlO2fzylGY8TqWraFbRBsVdAiimiiSOUX/ifQSsZriSFntSFl0XixvYzymp&#xD;
+3A+GO0NVRM1HShyLRiapLKR3Ml/20t0u/UHe3rSUTf+j0SBlMzUQDS2OakFMyA1CcssIrwVA/UHg&#xD;
+Wsl9dKVObNwS/+UQr3lpvK5syxjwl5VaYJFjOkS47rmxlqT3LQnIn+E9YRCdRSfP3cNAIuhxNMw0&#xD;
+hIBaLAKIYgbsSwN18nQMcp8tweRZew5T8mlL+k90SSag98eO9K6DPTZrREtqhehKwPgp3oKYm0gG&#xD;
+FelpCQLwzuSzLY6TB8sTF46lI8gF89T6mme8FXNIsl4aDonureAkxPVFCTf+WgyqXUECGjPuqPWE&#xD;
+UJ+lNdA8Yci3qm9EdR8bDXITtTYoij/aBRC+/Ksb2y+DCa72WJ5KlQ9lz4oEGTmpEeu9bnrODM0W&#xD;
+pzopfMKmYFGctxFq7eUboNZOJER/J/aPKHjrVKiVckkCDvgwqv1XxkdwzamkjQ9LYMuBVUCsp2FW&#xD;
+CJ+NkGjN+fnCGuNHScs/wBS1WqOkKrzUrWoPpaha+QZFKAED6IQoAtyZQc0U74aS4s5E7ZnQRI1T&#xD;
+b1ZHgpvk+zc9IlH2Wacv1JGUtM6VXdM5f1ypasBMNNfnMvh7rXc5Z0pX+IPEkHzC4vkcce5sftNA&#xD;
+AehA7El1JriQ/Dm3c3jz6MEeds8FyRMmcqKsFLqbRb1u3dcJszPJ/yC7cBmGnob7argiphy6NGDD&#xD;
+hfiqbORf1inIG/6mCoQgxD+w/6MhIGiotZ+jLsDrOREiDqr2/xixjG7PiJmIccTcsyFlCHP3PxRE&#xD;
+CVfPUsjGw5ZxeG7pVcpbMy5CHn6lmB5PE4JfmgO6LvsN5J6v/Z4806fakvAKK4CqdxctkhH2hw6M&#xD;
+iZItNeYzH8p5nFhauxTWTjGTKM1hVDUxxaHNEX4jZYTT/GN4boy5N+OX/ysaEBDXtSym2yGqnzNp&#xD;
+9cW4YNoTh79A0/0pOyfIT4fUaQLIP6JEYyThCNQl+NSSKZdAFXco4HXzSpF8TvN8qgklZ6XZRC5T&#xD;
+9wARVxBZ4w+hydWA4Sqi5rmaxdRFsh4UhK2AjmC9fg96yOHgOXCfrzHxuD3Hj3tQmxL9OjfBvkgx&#xD;
+DJGTgFbZC9iEjCOq2xpAxxUAQO1yvnegED3kweIQi7N7wgm+77wLXr5va4B7vvVxCc1wzGmPUwEt&#xD;
+rqV3oKLobbf0Ste0zWsiqZAJFLDS0RhV1jn7O27TBnwZ6SkOVhR1rd/d2sQOXqvqwWIgp2H0gqkd&#xD;
+nnU5wBDnhf4pSa4rHeRXXk+zCzBEbyEv2KUc0H8BCC6Ca7Lgtsl1E8yWhrQdpxp1iKRpK8wEBHM6&#xD;
+WDXHzHxdwNBHgaonrM8zTMDaM6JmNHHYpEuWbf6G+r3awanfLzalrHQDBPQqYXwbh5GbnKxJVfqV&#xD;
+miPQhqb/FBeG/lCQ9tOiIzEsfduK+hRFfRH4Td/nciR9VYZXl2TmU6HyK5e0UlM8Iq1BRes42HCc&#xD;
+ar/2cN9w1zFBjA3HfP5XPC31895mF0vswu7+q/fq1plRxtvwoV7Y7gcwEgV8FKZAHALeHhR9lOPl&#xD;
+oP3Htch00S4TY5pDqQTGVR4OwduYt7B756JpKOwRUXzdjUofonFMbnzgR7s7TSYtu3P4baM5R0DY&#xD;
+zVeiOwRjFRc/JW5NXri+4Bq39yRa836WSq3L6YTh7wXaR+8h6y0yEmx3OlYjlsUGcxe1drujt4cA&#xD;
+t+v9rXNu+CynfV5ig7tyToFE/FbnQXvpt/r48hUahVJzCrYEQcBA0NzH/1WVeevwbG5MIJN8Rfxe&#xD;
+VnxVPKQMGIVeIvq+T66kiTwim4IhdozLguzVsSWI8t3EBGp3L1jYahQ8ep5394K9RZeQTHKepFYI&#xD;
+re2FCOxsLs9rqmB9A9m33oyKwAXumSqRKgu9IZdW6DmX7e7+RV+qDsvAg2Us1SyAdypc2F+02KQ4&#xD;
+tgbbBkBTQMYizYFfDLv0HS45fzIOYzAGGaakFYq0UL/LpYvYU4r9krCprMoilxW3UBu2BjeQwW7U&#xD;
+BVujZQEqNCO5PZ/0BgHYnpVgZGCXFtO7jR9U3omTnBdbKV3dcOWmae6z5WFwIlFiMYmDYBJtLNL8&#xD;
+MqFoM/BZSfmLkirjsytER3KWae7LBh7yt5KTuwJrHbEtYdYWRTrjVh9QKOMDmbm61L6nxWOm+20y&#xD;
+wrU+bHl4s04LGPxHYJysPs4WRnKdIu98KW95NQCIChGKfXj1TjkAz808G23ezydyip8x+UaaXish&#xD;
+uWu5zO+4YawZuPccp2h0Ho4ypKFgFLAKzlXIbgMPPtPr8A0RyiQg7fb709EtkfTqi1PEZQz50zsd&#xD;
+p4/OGjr6HBym+sJS4La98xK5R7ZBPQNgIFme2iXX8/EYera4DulnbHo3KiTPG3nKGBnI702HHjvQ&#xD;
+nJkO+7pDiunpSdeJy2Ddl+9kWwSJ5tttsqL6ofSNh6dyc2lAvRqjRpbIVlbxrwcu/PgYinLhrfR2&#xD;
+3wRKTOCGg9GV+leKaOST6/vpQTL/zNPYiGUQI9kWpKSToEIMWCV5Axn59v+lzqsMhlcppNBYS/BG&#xD;
+0wlpMc0NqLJRBnVJiu9Ohl1icsc3q+LEyqcKZdxOEoKZuDyUEZVoA6ja9eN4Wb79PqEKvfkg+dyQ&#xD;
+aJjVrXi5Nup3OlFRHPsJeeNPNUQG78rhu3gJYP8UNDR3RyO6YMueMVUsisRCEnmmEh483l6jZE/T&#xD;
+d97cWcL3VbfFzfPlo6p1LlE56jDwDWo1vZ6WDlj38hS8qmuNkMJ20HwY9ZZQkOjTDcQPWkQeZKn4&#xD;
+wHQb5jLJHGbaFIJHrqo3qLWfpj94vMt99N6EbRNXUGW9syiVBFGaOumLv8vN0oXvBKP3hDQE1oNO&#xD;
+C17sxBx+uLgOQ6J3dYT0E8Lyf3Ca6PVW4fuaYmVgNeL98yBKWsKBfyM5USI0Z8JmlKboehgISVrL&#xD;
+/tXJst/6bbbWI/GjoAKo/lZZKEGRmzV5f1e48tmtYBlTzzS4pjNHlt47hos/6YN6AICNmoBqWaNX&#xD;
+jWlFYzP1Y4tW0lVRJzUra8oYgQXLuz578jtidhJ8MJ2HKT3dfjtXiDa0lZcVotwNJ01n1Dz1teD0&#xD;
+vaGB8vITVUsXZmRGvlRp0y6DW9ThBHsC2PDxNHWd56x+XnrFWNRITt4cMShf5SAnyhTDHlFZYCEQ&#xD;
+dpv7tvnmxndIvxKzgVfwcXns+selfnpb9MG1vQmV4+VpLZ/wGkih5AkSP76tEagEVYqf9U2+LMAg&#xD;
+1wfYbB9eP8Gu3fOgzD3QomXTthuMp1OIdqoLDR+iZUmA2e7Te0fzaZKAbxtpHZB4kTTBUVHYbvnl&#xD;
+Vs7ZKAlvT3QspGedus04gMjpCouUHh5vkVnMHwnETcn0q8fbZsbtJGSxObdk0gmjg7COhq+/8XKH&#xD;
+9PtnYCO5I06NDDqbgy8mbPeWMLDFpsTXz+X+SD9+1MLdfw/hEqah/cofavist6oUNCWC3+jFjpnH&#xD;
+nkPEQAYN4AVclyTMmlabXP8mqEkLW5pRnIlin3/+NnTgFwa9XhMWBKv+FnuITFpSWUE+ZKuh7pPc&#xD;
+NH1NUdt7z4fnpADG4H3geHUdiUFa0NzmeG9d++oTPOnMu/b2J0aNJPjNjk0qKZoD8xbg7wSl6AAo&#xD;
+DTA2XNoc2ZS6qoIb7WnwuN4goRIHR/5uVk+hHLfr1H3+EBy70xVGx/YqPBVV+i6BTth7bkorihuz&#xD;
+tnQhwRVvQCKV2AZ/MZIMR/8FgXBNjdn99U2ODTXUwvy8Odh7h6NcXjHqkeeYFFphxJuhl7UKMUhN&#xD;
+lYO78Ic2QmoHSwOetsTA6nNud8DJ0AGc6Wu8oe6GMk4PF2ra4siY9tZoZUC6+MkZgQcm7pUNzNM/&#xD;
+eqXwnoPE/63pATU8Y9+7ZStTLJbdeY4k2FLnn5MENjAQWZL1s3wC+zeFNRIJLSxaHZGPPXIfwIlM&#xD;
+ycEABlEcy/AfsKC1ijlrzBdk9lvNvsNcXpRU4xsBO/JHDblhmtMokR5WS8XmTOP7kbpM9UeP9kjO&#xD;
+6aUCMVg49X/8qozgATZSsqlV9t6KzO7K6eJXX+H4+Rzbj3dQeeVqrAdAj4W+sBRLN/ogdKejOWBJ&#xD;
+ChB2zqx9nYFH/1VTLz5DTte5Znwnx57neJiwAKLjbs33o0ITTCC+SGkY5sPImo51+yRW9/jjInhB&#xD;
+agdmN/Y4L/nEv2ROQzjpEvXXPQZy3YYWwhf6t5mZN+Geu7p8jOZQ2cAaqrWciu37cEfCV55+O0l5&#xD;
+ch8TTbgBNBQle6QJtn0K7aUAqsHSIUBibDElsUBf3zD5MAJl1PSldU6MXneOgfOL61XYgq1XKF6S&#xD;
+Qe+86mVBqs97WXikGshV+V2l9idFYvwvo6JWp7UeQ6GCIOknqa5m36FLrULwMlRERGj7X8P2nZkv&#xD;
+aqHv9+oPz5u80nmmUHn+vdladAXPdLnN8o3XiBNocuf0f9Cqgebx0z4KnGUtoD9zgnlL5lRLRLrB&#xD;
+zKNIrbHIh3JmgGy36SCbtwEQnIHMxW3v1kmFkKQqvQYEU1gLosc5dcr478Jlv7Z/YgW7sONfPXU4&#xD;
+MiKsic2SBgtlHD16VlyUzFBXX1E48HPyjHrJ3ehCt37ivun/HOCVIlDGUkwHBtJgbGsYxSvnbKco&#xD;
+Zq2bu98oNcc2R80puS/DUgeQgu82Af/j7K/R4Trr55tCRz6S/nYjP+H71wqKisxmCy1TMmlexk2a&#xD;
+mUpS6Qsz7RtCUTQUr0G5kCsgSlzKf8snCh0BlKA4YgGtXMG25ic0xqd7MucHS77ydUrH7P/o7jMl&#xD;
+IDY9bQPyWGc5EOtg/4ijd5H4pAY0AB16R1LS3D/VluLS5M2uWPdCqcX5V3stXbyS+eAJcFDiaEds&#xD;
+n5C92OnvPVfDePoml7s2VLRmOhuPfgvkabZSwijW7fLtX89zmTmpkQ02xR+TJb4VfXvXsqru9Mfa&#xD;
+sB/k8KAqY+cJIVQnncEuumxbarBiQdI3HZz8s/weUiNu9Dq5j9JedsDgDVOJ7cv7/TnximzcMqI6&#xD;
+YH+R58dj0Jr1nZUm6kpiTLAW2kMq1e7/T98nOJopo6lV0jFjzzFoxARbsc0BpYFEtLlLqM83GEBt&#xD;
+i6TQFF+uejbW3avp1IlNrfjuOCNeypJQpy2TVqJ/GJW2TUYH9t13VL2VqwWYo0OEUW0f67qLZJYY&#xD;
+2ykZFisJ/Ju+BBLF/m8Mj63n0CXxrLRHvsTXHC/8uyVmr3fXeixpUFrwMS1XSbUyfNSgVvtxurE/&#xD;
+wb6IhUx4sFodqwAg08wZg5N95PDbAMgPACM8bihW3V5ruq5mDI8pB5hYlCwOgV/wGTRQAyuZ0ytl&#xD;
+ktfeovxC+l1ff8i7PEaEbusknpqtw1nvg3E1S8NWJkNbyMWFXqMILWGc0qG6Yg8fCH4wS61mDiY/&#xD;
+DDaaTRMeOW0dlp6Mi1++TWxrexauG4bI1QaJSjUTYErTgHwcH2NQkGHj0UU0yBumcSmaitjNOtcm&#xD;
+MxNEm7WqJL6rmzk2pQYzcGmKiLTVlCKRvNDxvNIk/Ieaf8sZkVqT0JIoCYktwDr3pmWKaSJhuXQM&#xD;
+33750pGg3BoQgy8Gt72fdla6bsILN59y+8agkjBqhMsQpce4HUV1WXUPoz3uirgJEqwaZl9YlbRR&#xD;
+SjhGVb7t+JADmsWdnJv0A5fq9N728g0g+lwU7gPMO4G4RIgDyXExwxjBKMSA1IRlx5hdGIJxT4XG&#xD;
+53GdC3x1csoa144WfZ3BQPaCAx1Xvt6V7weu62j5KxlomhcLl5nKwF9XvjImGsMHrT5fQvVDgyYq&#xD;
+AKAfU3NE4+UsoV/MbFGFLFdrCJklqN0wUTghxH5XEV/8By9yqjGcP8pdwJ3THMTgPTt49+Iud7qO&#xD;
+T5o74D3R7Hi3x9H9jEyUppGa3jUv5AIj1h5BaPbNS7PEUFsQCriMpUqSpH0w2Y/e0QTU/ny56QzX&#xD;
+/zJjyosVlID2AvHvwpI/23Q+D8+kZ2gldKBen3F6iVx4mifh8X1YkisxZrRbWsSUDMoRYg6ukAcp&#xD;
+tJGGb0RLuKwJ2A5rPaAPzUGA0HCZ3FBZ3fV78YO70FYZJkIiyYKRKIk3V6wFuMNSVWpbu3pTaNXf&#xD;
+DUi8VgKEf6QbI7KCjro8o4N8AxC6EpWPPgRAIIl1pRYMdsucKAZp/4DFWZekm/RKayrG2eIccHSe&#xD;
+oHTcPoxA1XY2E5oywr6o5x+N6EA1jmSFz5NtWHufWsKkSDw+OfJzn0S15C/49kg+eF+HqlE56wrl&#xD;
+4idfVGtjuvea3qMzgcZlYdjbNHTICLKZdVim7R/XKmEiq5WKnKAanP0xXXO+7Lmx0TGq8CxV2vBg&#xD;
+XMo2DQ4X+JdBq97z4DFM18vSd/QMhocnt4xjkua8Kpzkes4QEWCvoR9SgDqkeWL2Rvkm9YxmHK0K&#xD;
+gmALZMM8l1DMQZnhhL47PMIIn07nBXGuFQxpRlAfmI7gLUGc6/W80B/HWCWY9kdqYPw+VWaCS5gW&#xD;
+fla+ItgthhVYnIhbwrzrWOI6VFuw2v+JYDbZYnpkhasANSDIuphQk6dQMwu3iEjQYmGJzBD5EqXM&#xD;
+gnJrjFvf1QsFR7ZQku/7UYudZbeBAGGST6g3TiXye5ZtsxReT52ehcHYoNJnDwcz3gZ1UDRLFcgD&#xD;
+tuDLUI6iSmwjw9mhpB8GtQO92BokRyw3asSgQcucm1NAR/KXQ85CzS4W7CPXTwUwRPds8cwrWCWP&#xD;
+sdwOXzNV6blOkYsDHVepxM3OoTtuLsZa6YQfb3L5ZnLedRuk77dwTp051OCtU21+ggIUXJjUA+Ad&#xD;
+/jkNDqic16cPfp9AqQaVVB2NQfT81mZKzp9Z+41GQVEzhX7n8zsJHnaic/rIIo4oNrEa/xsS8qXh&#xD;
+IAR7CixqtTEfN0AkXzk4IGnHl2+4vYRYOolV/vjCHWcbbcfSrGqo20EeKofxIB6KLYQid7DcFAI6&#xD;
+yBmUo6cuw3lysX2MrsAhgcCt2J0W4pZKrvjC9PvHdRNDL201BCxyBeuiuZFPDIFNglGLgupLlEKN&#xD;
+6tBUc/QsXY5wY/41WKCNWg0rm+5wMUKDQeR+0EZZQFA6Wrn8hoUADAGb0GxxWF/fXR+hDieTVcz1&#xD;
+48KWUX0ROk1s1UxpcAa1ZqiRaA/2kUSEP0YXXR8rCeDgvfh1k6QZCxQpIRwU2IAr5VLo+LfB8RfO&#xD;
+Ypmwog6IOv/piCRtNTHX9kcFy3kdsqy/Nfb8A+09pgKLsDD8bPbGN1ukuPm49BPOAtYjugbMk/oO&#xD;
+E1gyiHcrI3JB5uqTsh46ZBUBMF5wUMzPPVSG9STLhaXRQTouMF5AKEirqr+Z6UjkfGlqIdnMikp4&#xD;
+d09evtwvYzMKKm3NJA00bTqeN05jPZ1lB+AgDcuaDL/FFtlRvdb7D7JfK8JEtMnMCJhT3AP0GUMl&#xD;
+iDHNWPzjjtdTdMTO+FOPP3CoxUzPNWfK2PUQoEGL7ld4hoeGRGxNjCo8k5koCEG3A57+0HFK5RxN&#xD;
+8T7rdXw/pFvBNnzAv2ntpzbjnE5lvcK3hU2Pwqm3ne/ku7UXBjNH0mhLFwi23Ecx0c71XZFXMMgP&#xD;
+8pbub6OqzGB6vOu2OXDAfEKZmTTc2iZCUKQ3kT3Ow2T1n542FjIJ8XEfVfW5Uso1bKkowKTRdPra&#xD;
+18fyBc06NswD7B2S6DDKz4a7qTvqO4Q6sujVnFCpOJ9FEUg/rMYny3QPSSARR8/9Xgjm7pp2XNxO&#xD;
+GufIOuzrNfrb7wypaJzfVAFEXSP8oaIo42ghk1dIzNCGmeaDnXkOxkB7klkWeR2zcDc2cBue/nZs&#xD;
++RrCfCM4VX2i81NjRw8NsMpu4h75qZLgSsVW1sGWWSZQudmv8GYlxwTnEZ3G6xF9k1cr1y2fdZ7B&#xD;
+Iked3BsVhbIKte/MK/kMIqG1LQGTVnr3T0fkybPKWA==</EncryptedData>
   <Nodes>
     <Node ToolID="1">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
-        <Position x="0" y="0" width="59" height="59" />
+        <Position height="59" width="59" x="0" y="50"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="3">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="186" y="270" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <NumRows value="1" />
-          <Fields>
-            <Field name="input_rotate" />
-            <Field name="input_page" />
-            <Field name="input_isTodoAll" />
-          </Fields>
-          <Data>
-            <r>
-              <c>90</c>
-              <c>2</c>
-              <c>False</c>
-            </r>
-          </Data>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="input_rotate" source="TextInput:" type="Byte" />
-            <Field name="input_page" source="TextInput:" type="Byte" />
-            <Field name="input_isTodoAll" source="TextInput:" type="Bool" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-    </Node>
-    <Node ToolID="5">
+    </Node><Node ToolID="5">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="198" y="150" width="59" height="59" />
+        <Position height="59" width="59" x="546" y="212"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
-          <Name />
+          <Name/>
           <DefaultAnnotationText>Update Value</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="6">
+    </Node><Node ToolID="6">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="342" y="150" width="59" height="59" />
+        <Position height="59" width="59" x="690" y="212"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
-          <Name />
+          <Name/>
           <DefaultAnnotationText>Update Value</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="7">
+    </Node><Node ToolID="7">
       <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
-        <Position x="486" y="258" />
+        <Position x="906" y="320"/>
       </GuiSettings>
       <Properties>
         <Configuration>
           <Name>Output</Name>
-          <Abbrev />
+          <Abbrev/>
         </Configuration>
         <Annotation DisplayMode="1">
           <Name>Output</Name>
           <DefaultAnnotationText>Output</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
-    </Node>
-    <Node ToolID="8">
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput"/>
+    </Node><Node ToolID="8">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-        <Position x="186" y="54" width="59" height="59" />
+        <Position height="59" width="59" x="534" y="116"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
           <Name>rotate_angle</Name>
           <DefaultAnnotationText>rotate_angle</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="9">
+    </Node><Node ToolID="9">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-        <Position x="330" y="54" width="59" height="59" />
+        <Position height="59" width="59" x="678" y="116"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
           <Name>pdf_page</Name>
           <DefaultAnnotationText>pdf_page</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="11">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
-        <Position x="282" y="282" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <CartesianMode>Error</CartesianMode>
-          <SelectConfiguration>
-            <Configuration outputConnection="Output">
-              <OrderChanged value="False" />
-              <CommaDecimal value="False" />
-              <SelectFields>
-                <SelectField field="*Unknown" selected="True" />
-              </SelectFields>
-            </Configuration>
-          </SelectConfiguration>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="input_rotate" source="TextInput:" type="Byte" />
-            <Field name="input_page" source="TextInput:" type="Byte" />
-            <Field name="input_isTodoAll" source="TextInput:" type="Bool" />
-            <Field name="input_path" size="40" source="TextInput:" type="WString" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
-    </Node>
-    <Node ToolID="14">
+    </Node><Node ToolID="14">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
-        <Position x="90" y="54" width="59" height="59" />
+        <Position height="59" width="59" x="438" y="116"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
           <Name>pdf_path</Name>
           <DefaultAnnotationText>pdf_path</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="16">
+    </Node><Node ToolID="16">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="102" y="150" width="59" height="59" />
+        <Position height="59" width="59" x="450" y="212"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
-          <Name />
+          <Name/>
           <DefaultAnnotationText>Update Value</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="17">
-      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
-        <Position x="186" y="342" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <NumRows value="1" />
-          <Fields>
-            <Field name="input_path" />
-          </Fields>
-          <Data>
-            <r>
-              <c>C:/Users/JYKL/Desktop/中文譯音使用原則 [PDF].pdf</c>
-            </r>
-          </Data>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-        <MetaInfo connection="Output">
-          <RecordInfo>
-            <Field name="input_path" size="40" source="TextInput:" type="WString" />
-          </RecordInfo>
-        </MetaInfo>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
-    </Node>
-    <Node ToolID="19">
-      <GuiSettings Plugin="JupyterCode">
-        <Position x="390" y="282" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <WorkflowName>c:\users\jykl\desktop\alteryx\altreyx_ait_components\altreyx_plugin_pdfrotate\alteryx_src\supporting_macros\entry.yxmc</WorkflowName>
-          <JupyterProduction>true</JupyterProduction>
-          <vEnvName>jupytertool_venv</vEnvName>
-          <DefaultVenv>1</DefaultVenv>
-          <productionModeScript>#################################
-# List all non-standard packages to be imported by your 
-# script here (only missing packages will be installed)
-from ayx import Package
-
-Package.installPackages(package=['pandas','PyPDF2'], install_type="install --user")
-
-
-#################################
-from ayx import Alteryx
-import pandas as pd
-from PyPDF2 import PdfReader
-from PyPDF2 import PdfWriter
-import os
-pdf_list = Alteryx.read("#1")
-
-try:
-    input_page = pdf_list['input_page'].iloc[0]
-    input_rotate = pdf_list['input_rotate'].iloc[0]
-    input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]
-    input_path = pdf_list['input_path'].iloc[0]
-    file = os.path.splitext(input_path)[0]
-    ext = os.path.splitext(input_path)[1]   
-    reader = PdfReader(input_path, 'rb')
-    writer = PdfWriter()
-
-    arrangeInputData = str(input_page).replace(" ","").split(",")
-    isTodoAll = input_isTodoAll
-    rotate = input_rotate
-    toDoPage=[]
-
-    if(isTodoAll):
-            for pageNum in range(reader.numPages):
-                page = reader.getPage(pageNum)
-                page.rotateClockwise(rotate)
-                writer.addPage(page)
-    else:
-        # 分析待處理頁數，將1-3拆成1,2,3
-        for index in range(len(arrangeInputData)):
-            if(len(str(arrangeInputData[index]))==0):
-                continue
-            if('-' in str(arrangeInputData[index])):
-                startAndEndPage = str(arrangeInputData[index]).split('-')
-                startPage = ""
-                endPage = ""
-                # 起始頁與結束頁未輸入時, 始頁自動更改為第一頁, 結束頁自動取pdf最後一頁
-                if(len(str(startAndEndPage[0]))==0):
-                    startAndEndPage[0]=1
-                if(len(str(startAndEndPage[1]))==0):
-                    startAndEndPage[1]=reader.numPages
-
-                # 判斷起始頁和結束頁
-                if(int(startAndEndPage[0])&lt;int(startAndEndPage[1])):
-                    startPage = startAndEndPage[0]
-                    endPage = startAndEndPage[1]
-                else:
-                    startPage = startAndEndPage[1]
-                    endPage = startAndEndPage[0]
-                
-                # 展開並寫入至待處理頁數
-                for addPageNum in range(int(startPage),int(endPage)+1):
-                    # 頁數字串轉數字
-                    toDoPage.append(int(addPageNum))
-            else:
-                toDoPage.append(int(arrangeInputData[index]))
-        
-        # 頁數字串轉數字
-        for index in range(len(toDoPage)):
-            toDoPage[index] = int(toDoPage[index])
-
-        # 去除重複頁數
-        toDoPage = list(set(toDoPage))
-
-        print(toDoPage)
-
-        # 獲取最大頁數
-        maxPageNum = max(toDoPage)
-
-        # 判斷輸入頁數是否超過檔案頁數
-        if(maxPageNum &gt; reader.numPages):
-            raise Exception("您輸入的頁數已超過檔案最大頁數，請更改頁數範圍後再執行")
-
-        # 處理指定頁數 
-        for pageNum in range(reader.numPages):
-            page = reader.getPage(pageNum)
-            if((pageNum+1) in toDoPage):
-                page.rotateClockwise(rotate)
-            writer.addPage(page)
-
-    # pdfWriter.encrypt(password)
-    output_path = f'{file}_rotated{ext}'
-    i = 2
-    while os.path.exists(output_path):
-        output_path = f'{file}_rotated{i}{ext}'
-        i += 1
-
-    pdfOut = open(output_path, 'wb')
-    writer.write(pdfOut)
-    pdfOut.close()
-    pdf_list["status"] = "Success"
-    print("Success")
-except Exception as e:
-    pdf_list["status"] = "Failure：" + str(e)
-    print("Failure：" + str(e))
-Alteryx.write(pdf_list,1)
-
-
-#################################
-</productionModeScript>
-          <Port>55245</Port>
-          <JupyterGuidDir>7640bca0-2c13-4d2c-8f32-4b068e3c7c0c</JupyterGuidDir>
-          <JupyterGuidCopy />
-          <LastExecutedByEngineVersion>2020.4.5.12471</LastExecutedByEngineVersion>
-          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","\n","Package.installPackages(package=['pandas','PyPDF2'], install_type=\"install --user\")"]},{"cell_type":"code","execution_count":2,"metadata":{"scrolled":false},"outputs":[],"source":["from ayx import Alteryx\n","import pandas as pd\n","from PyPDF2 import PdfReader\n","from PyPDF2 import PdfWriter\n","import os\n","pdf_list = Alteryx.read(\"#1\")\n","\n","try:\n","    input_page = pdf_list['input_page'].iloc[0]\n","    input_rotate = pdf_list['input_rotate'].iloc[0]\n","    input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]\n","    input_path = pdf_list['input_path'].iloc[0]\n","    file = os.path.splitext(input_path)[0]\n","    ext = os.path.splitext(input_path)[1]   \n","    reader = PdfReader(input_path, 'rb')\n","    writer = PdfWriter()\n","\n","    arrangeInputData = str(input_page).replace(\" \",\"\").split(\",\")\n","    isTodoAll = input_isTodoAll\n","    rotate = input_rotate\n","    toDoPage=[]\n","\n","    if(isTodoAll):\n","            for pageNum in range(reader.numPages):\n","                page = reader.getPage(pageNum)\n","                page.rotateClockwise(rotate)\n","                writer.addPage(page)\n","    else:\n","        # 分析待處理頁數，將1-3拆成1,2,3\n","        for index in range(len(arrangeInputData)):\n","            if(len(str(arrangeInputData[index]))==0):\n","                continue\n","            if('-' in str(arrangeInputData[index])):\n","                startAndEndPage = str(arrangeInputData[index]).split('-')\n","                startPage = \"\"\n","                endPage = \"\"\n","                # 起始頁與結束頁未輸入時, 始頁自動更改為第一頁, 結束頁自動取pdf最後一頁\n","                if(len(str(startAndEndPage[0]))==0):\n","                    startAndEndPage[0]=1\n","                if(len(str(startAndEndPage[1]))==0):\n","                    startAndEndPage[1]=reader.numPages\n","\n","                # 判斷起始頁和結束頁\n","                if(int(startAndEndPage[0])<int(startAndEndPage[1])):\n","                    startPage = startAndEndPage[0]\n","                    endPage = startAndEndPage[1]\n","                else:\n","                    startPage = startAndEndPage[1]\n","                    endPage = startAndEndPage[0]\n","                \n","                # 展開並寫入至待處理頁數\n","                for addPageNum in range(int(startPage),int(endPage)+1):\n","                    # 頁數字串轉數字\n","                    toDoPage.append(int(addPageNum))\n","            else:\n","                toDoPage.append(int(arrangeInputData[index]))\n","        \n","        # 頁數字串轉數字\n","        for index in range(len(toDoPage)):\n","            toDoPage[index] = int(toDoPage[index])\n","\n","        # 去除重複頁數\n","        toDoPage = list(set(toDoPage))\n","\n","        print(toDoPage)\n","\n","        # 獲取最大頁數\n","        maxPageNum = max(toDoPage)\n","\n","        # 判斷輸入頁數是否超過檔案頁數\n","        if(maxPageNum > reader.numPages):\n","            raise Exception(\"您輸入的頁數已超過檔案最大頁數，請更改頁數範圍後再執行\")\n","\n","        # 處理指定頁數 \n","        for pageNum in range(reader.numPages):\n","            page = reader.getPage(pageNum)\n","            if((pageNum+1) in toDoPage):\n","                page.rotateClockwise(rotate)\n","            writer.addPage(page)\n","\n","    # pdfWriter.encrypt(password)\n","    output_path = f'{file}_rotated{ext}'\n","    i = 2\n","    while os.path.exists(output_path):\n","        output_path = f'{file}_rotated{i}{ext}'\n","        i += 1\n","\n","    pdfOut = open(output_path, 'wb')\n","    writer.write(pdfOut)\n","    pdfOut.close()\n","    pdf_list[\"status\"] = \"Success\"\n","    print(\"Success\")\n","except Exception as e:\n","    pdf_list[\"status\"] = \"Failure：\" + str(e)\n","    print(\"Failure：\" + str(e))\n","Alteryx.write(pdf_list,1)"]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]}],"metadata":{"kernelspec":{"display_name":"jupytertool_venv","language":"python","name":"jupytertool_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings EngineDll="AlteryxJupyterPluginEngine.dll" EngineDllEntryPoint="AlteryxJupyter" />
-    </Node>
-    <Node ToolID="20">
+    </Node><Node ToolID="20">
       <GuiSettings Plugin="AlteryxGuiToolkit.Error.Error">
-        <Position x="54" y="246" width="59" height="59" />
+        <Position height="59" width="59" x="306" y="308"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
-          <Name />
+          <Name/>
           <DefaultAnnotationText>[#1]&amp;&amp;[#2]&amp;&amp;([#3])
 必填欄位未輸入完整, 請輸入完後再執行</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="21">
+    </Node><Node ToolID="21">
       <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-        <Position x="486" y="54" width="59" height="59" />
+        <Position height="59" width="59" x="834" y="116"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
           <Name>pdf_isToDoAll</Name>
           <DefaultAnnotationText>pdf_isToDoAll</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
-    <Node ToolID="22">
+    </Node><Node ToolID="22">
       <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-        <Position x="498" y="150" width="59" height="59" />
+        <Position height="59" width="59" x="846" y="212"/>
       </GuiSettings>
       <Properties>
-        <Configuration />
+        <Configuration/>
         <Annotation DisplayMode="0">
-          <Name />
+          <Name/>
           <DefaultAnnotationText>Update Value</DefaultAnnotationText>
-          <Left value="False" />
+          <Left value="False"/>
         </Annotation>
       </Properties>
-    </Node>
+    </Node><Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="222" y="368"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="False"/>
+          <Name>Input</Name>
+          <Abbrev/>
+          <ShowFieldMap value="False"/>
+          <Optional value="True"/>
+          <TextInput>
+            <Configuration>
+              <NumRows value="0"/>
+              <Fields>
+                <Field name="connect_input_path"/>
+              </Fields>
+              <Data/>
+            </Configuration>
+          </TextInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>Input</Name>
+          <DefaultAnnotationText>Input</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="connect_input_path" size="1073741823" source="TextInput:" type="V_WString"/>
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput"/>
+    </Node><Node ToolID="25">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+        <Position height="59" width="59" x="126" y="272"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name>connectInputPathMapping</Name>
+          <DefaultAnnotationText>connectInputPathMapping</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node><Node ToolID="27">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position height="59" width="59" x="138" y="368"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node><Node ToolID="30">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position height="59" width="59" x="1014" y="116"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name>input_isConnectFile</Name>
+          <DefaultAnnotationText>input_isConnectFile</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node><Node ToolID="31">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position height="59" width="59" x="1026" y="212"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node><Font name="Arial" size="8.25" style="0"/>
   </Nodes>
-  <Connections>
-    <Connection>
-      <Origin ToolID="3" Connection="Output" />
-      <Destination ToolID="11" Connection="Targets" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="17" Connection="Output" />
-      <Destination ToolID="11" Connection="Source" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="5" Connection="Action" />
-      <Destination ToolID="3" Connection="Action" />
-    </Connection>
-    <Connection name="#4">
-      <Origin ToolID="6" Connection="Action" />
-      <Destination ToolID="3" Connection="Action" />
-    </Connection>
-    <Connection name="#3">
-      <Origin ToolID="22" Connection="Action" />
-      <Destination ToolID="3" Connection="Action" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="8" Connection="Question" />
-      <Destination ToolID="5" Connection="Question" />
-    </Connection>
-    <Connection name="#2">
-      <Origin ToolID="8" Connection="Question" />
-      <Destination ToolID="20" Connection="Question" />
-    </Connection>
-    <Connection name="#3">
-      <Origin ToolID="9" Connection="Question" />
-      <Destination ToolID="20" Connection="Question" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="14" Connection="Question" />
-      <Destination ToolID="20" Connection="Question" />
-    </Connection>
-    <Connection name="#4">
-      <Origin ToolID="21" Connection="Question" />
-      <Destination ToolID="20" Connection="Question" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="9" Connection="Question" />
-      <Destination ToolID="6" Connection="Question" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="11" Connection="Output" />
-      <Destination ToolID="19" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="14" Connection="Question" />
-      <Destination ToolID="16" Connection="Question" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="16" Connection="Action" />
-      <Destination ToolID="17" Connection="Action" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="19" Connection="Output1" />
-      <Destination ToolID="7" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="21" Connection="Question" />
-      <Destination ToolID="22" Connection="Question" />
-    </Connection>
-  </Connections>
+  
+  
   <Properties>
-    <Memory default="True" />
-    <GlobalRecordLimit value="0" />
-    <TempFiles default="True" />
-    <Annotation on="True" includeToolName="False" />
-    <ConvErrorLimit value="10" />
-    <ConvErrorLimit_Stop value="False" />
-    <CancelOnError value="False" />
-    <DisableBrowse value="False" />
-    <EnablePerformanceProfiling value="False" />
-    <DisableAllOutput value="False" />
-    <ShowAllMacroMessages value="False" />
-    <ShowConnectionStatusIsOn value="True" />
-    <ShowConnectionStatusOnlyWhenRunning value="True" />
-    <ZoomLevel value="0" />
+    <Memory default="True"/>
+    <GlobalRecordLimit value="0"/>
+    <TempFiles default="True"/>
+    <Annotation includeToolName="False" on="True"/>
+    <ConvErrorLimit value="10"/>
+    <ConvErrorLimit_Stop value="False"/>
+    <CancelOnError value="False"/>
+    <DisableBrowse value="False"/>
+    <EnablePerformanceProfiling value="False"/>
+    <DisableAllOutput value="False"/>
+    <ShowAllMacroMessages value="False"/>
+    <ShowConnectionStatusIsOn value="True"/>
+    <ShowConnectionStatusOnlyWhenRunning value="True"/>
+    <ZoomLevel value="0"/>
     <LayoutType>Horizontal</LayoutType>
     <Constants>
       <Constant>
         <Namespace>Question</Namespace>
-        <Name>rotate_angle</Name>
-        <Value />
-        <IsNumeric value="False" />
+        <Name>connectInputPathMapping</Name>
+        <Value/>
+        <IsNumeric value="False"/>
       </Constant>
       <Constant>
         <Namespace>Question</Namespace>
-        <Name>pdf_page</Name>
-        <Value />
-        <IsNumeric value="False" />
+        <Name>Input</Name>
+        <Value/>
+        <IsNumeric value="False"/>
       </Constant>
       <Constant>
         <Namespace>Question</Namespace>
-        <Name>pdf_path</Name>
-        <Value />
-        <IsNumeric value="False" />
+        <Name>input_isConnectFile</Name>
+        <Value/>
+        <IsNumeric value="False"/>
       </Constant>
       <Constant>
         <Namespace>Question</Namespace>
         <Name>pdf_isToDoAll</Name>
-        <Value />
-        <IsNumeric value="False" />
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>pdf_page</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>pdf_path</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>rotate_angle</Name>
+        <Value/>
+        <IsNumeric value="False"/>
       </Constant>
     </Constants>
     <MetaInfo>
-      <NameIsFileName value="True" />
+      <NameIsFileName value="True"/>
       <Name>entry</Name>
-      <Description />
-      <RootToolName />
-      <ToolVersion />
-      <ToolInDb value="False" />
-      <CategoryName />
-      <SearchTags />
-      <Author />
-      <Company />
-      <Copyright />
-      <DescriptionLink actual="" displayed="" />
+      <Description/>
+      <RootToolName/>
+      <ToolVersion/>
+      <ToolInDb value="False"/>
+      <CategoryName/>
+      <SearchTags/>
+      <Author/>
+      <Company/>
+      <Copyright/>
+      <DescriptionLink actual="" displayed=""/>
       <Example>
-        <Description />
-        <File />
+        <Description/>
+        <File/>
       </Example>
     </MetaInfo>
     <Events>
-      <Enabled value="True" />
+      <Enabled value="True"/>
     </Events>
     <RuntimeProperties>
       <Actions>
@@ -517,59 +467,83 @@ Alteryx.write(pdf_list,1)
           <True>
             <Action>
               <Type>Dynamic</Type>
-              <Description />
-              <ToolId value="5" />
+              <Description/>
+              <ToolId value="5"/>
               <Expression>{{INPUT}}</Expression>
               <Destination>3/Data/r[1]/c[1]</Destination>
               <Mapping>Update Cell</Mapping>
               <Mode>Expression</Mode>
               <DynamicConfiguration>row	1
 column	1</DynamicConfiguration>
-              <DefaultConfiguration value="True" />
+              <DefaultConfiguration value="True"/>
             </Action>
             <Action>
               <Type>Dynamic</Type>
-              <Description />
-              <ToolId value="6" />
+              <Description/>
+              <ToolId value="6"/>
               <Expression>{{INPUT}}</Expression>
               <Destination>3/Data/r[1]/c[2]</Destination>
               <Mapping>Update Cell</Mapping>
               <Mode>Expression</Mode>
               <DynamicConfiguration>row	1
 column	2</DynamicConfiguration>
-              <DefaultConfiguration value="False" />
+              <DefaultConfiguration value="False"/>
             </Action>
             <Action>
               <Type>Dynamic</Type>
-              <Description />
-              <ToolId value="16" />
+              <Description/>
+              <ToolId value="16"/>
               <Expression>{{INPUT}}</Expression>
               <Destination>17/Data/r[1]/c[1]</Destination>
               <Mapping>Update Cell</Mapping>
               <Mode>Expression</Mode>
               <DynamicConfiguration>row	1
 column	1</DynamicConfiguration>
-              <DefaultConfiguration value="True" />
+              <DefaultConfiguration value="True"/>
             </Action>
             <Action>
               <Type>Error</Type>
               <Description>必填欄位未輸入完整, 請輸入完後再執行</Description>
-              <ToolId value="20" />
-              <Expression>[#1]==""  or
+              <ToolId value="20"/>
+              <Expression>([#1]=="" and [#5]=="False")  or
 [#2]==""  or
 ([#4]=="False" and [#3]=="")</Expression>
             </Action>
             <Action>
               <Type>Dynamic</Type>
-              <Description />
-              <ToolId value="22" />
+              <Description/>
+              <ToolId value="22"/>
               <Expression>{{INPUT}}</Expression>
               <Destination>3/Data/r[1]/c[3]</Destination>
               <Mapping>Update Cell</Mapping>
               <Mode>Expression</Mode>
               <DynamicConfiguration>row	1
 column	3</DynamicConfiguration>
-              <DefaultConfiguration value="False" />
+              <DefaultConfiguration value="False"/>
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description/>
+              <ToolId value="27"/>
+              <Expression>{{INPUT}}</Expression>
+              <Destination>26/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True"/>
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description/>
+              <ToolId value="31"/>
+              <Expression>{{INPUT}}</Expression>
+              <Destination>3/Data/r[1]/c[4]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	4</DynamicConfiguration>
+              <DefaultConfiguration value="False"/>
             </Action>
           </True>
         </NoCondition>
@@ -579,40 +553,40 @@ column	3</DynamicConfiguration>
           <Type>Tab</Type>
           <Description>Questions</Description>
           <Name>Tab (1)</Name>
-          <ToolId value="1" />
+          <ToolId value="1"/>
           <Questions>
             <Question>
               <Type>MacroOutput</Type>
-              <Description />
+              <Description/>
               <Name>Output</Name>
-              <ToolId value="7" />
+              <ToolId value="7"/>
             </Question>
             <Question>
               <Type>TextBox</Type>
               <Description>輸入旋轉角度</Description>
               <Name>rotate_angle</Name>
-              <ToolId value="8" />
-              <Default />
-              <Password value="False" />
-              <Multiline value="False" />
-              <Hidden value="False" />
+              <ToolId value="8"/>
+              <Default/>
+              <Password value="False"/>
+              <Multiline value="False"/>
+              <Hidden value="False"/>
             </Question>
             <Question>
               <Type>TextBox</Type>
               <Description>輸入轉置頁數</Description>
               <Name>pdf_page</Name>
-              <ToolId value="9" />
+              <ToolId value="9"/>
               <Default>1~3</Default>
-              <Password value="False" />
-              <Multiline value="False" />
-              <Hidden value="False" />
+              <Password value="False"/>
+              <Multiline value="False"/>
+              <Hidden value="False"/>
             </Question>
             <Question>
               <Type>FileBrowse</Type>
               <Description>pdf_path</Description>
               <Name>pdf_path</Name>
-              <ToolId value="14" />
-              <SaveAs value="False" />
+              <ToolId value="14"/>
+              <SaveAs value="False"/>
               <Mode>FileSpec</Mode>
               <FileSpec>Text Files (*.pdf)|*.pdf</FileSpec>
             </Question>
@@ -620,29 +594,53 @@ column	3</DynamicConfiguration>
               <Type>BooleanGroup</Type>
               <Description>是否處理全部頁數</Description>
               <Name>pdf_isToDoAll</Name>
-              <ToolId value="21" />
-              <Questions />
-              <Default value="False" />
-              <Collapsable value="False" />
+              <ToolId value="21"/>
+              <Questions/>
+              <Default value="False"/>
+              <Collapsable value="False"/>
+            </Question>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description/>
+              <Name>Input</Name>
+              <ToolId value="23"/>
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Connect Input Path Mapping</Description>
+              <Name>connectInputPathMapping</Name>
+              <ToolId value="25"/>
+              <Default/>
+              <Password value="False"/>
+              <Multiline value="False"/>
+              <Hidden value="False"/>
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>元件是否有連結檔案</Description>
+              <Name>input_isConnectFile</Name>
+              <ToolId value="30"/>
+              <Questions/>
+              <Default value="False"/>
+              <Collapsable value="False"/>
             </Question>
           </Questions>
         </Question>
       </Questions>
       <ModuleType>Macro</ModuleType>
-      <MacroCustomHelp value="False" />
-      <MacroDynamicOutputFields value="False" />
-      <MacroImageStd value="39" />
-      <MacroInputs />
-      <MacroOutputs />
-      <Wiz_CustomHelp value="False" />
-      <Wiz_CustomGraphic value="False" />
-      <Wiz_ShowOutput value="True" />
-      <Wiz_OpenOutputTools>
-        <Tool ToolId="7" Selected="True" />
-      </Wiz_OpenOutputTools>
-      <Wiz_OutputMessage />
-      <Wiz_NoOutputFilesMessage />
-      <Wiz_ChainRunWizard />
+      <MacroCustomHelp value="False"/>
+      <MacroDynamicOutputFields value="False"/>
+      <MacroImageStd value="39"/>
+      <MacroInputs/>
+      <MacroOutputs/>
+      <Wiz_CustomHelp value="False"/>
+      <Wiz_CustomGraphic value="False"/>
+      <Wiz_ShowOutput value="True"/>
+      <Wiz_OpenOutputTools/>
+      <Wiz_OutputMessage/>
+      <Wiz_NoOutputFilesMessage/>
+      <Wiz_ChainRunWizard/>
     </RuntimeProperties>
   </Properties>
+
 </AlteryxDocument>

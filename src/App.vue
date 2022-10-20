@@ -18,9 +18,18 @@
           <div class="card-header d-flex justify-content-between align-items-center"><b>Step1：請選擇PDF檔案：</b></div>
           <div class="card-body" style="overflow-x:auto;">
             <label for="exampleFormControlInput1" class="form-label"><b>
-                <BIconFiles style="vertical-align:text-top;" class="icon" />本元件將所連結之PDF檔進行特定角度的翻轉。
+                <BIconFiles style="vertical-align:text-top;" class="icon" />本元件將所選之PDF檔進行特定角度的翻轉。
               </b></label>
-            <ayx data-ui-props='{type:"FileBrowse", widgetId:"pdf_path", browseType:"File", fileTypeFilters: "PDF Files (*.pdf)|*.pdf"}'></ayx>
+            <ayx v-if="input_isConnectFile !== true" data-ui-props='{type:"FileBrowse", widgetId:"pdf_path", browseType:"File", fileTypeFilters: "PDF Files (*.pdf)|*.pdf"}'></ayx>
+            <div class="mb-3">
+              <label v-if="input_isConnectFile === true" for="exampleFormControlInput1" class="form-label"><b>
+                  <BIconColumns style="vertical-align:text-top;" class="icon" />根據您所連接的檔案，請選擇其路徑欄位
+                </b></label>
+                <select v-if="input_isConnectFile === true" class="form-control" v-model="connectInputPathMapping">
+                  <option disabled value="">選擇欄位</option>
+                  <option v-for="item,index in str_columns" v-bind:key="index">{{item}}</option>
+                </select>
+            </div>
           </div>
         </div>
 
@@ -64,7 +73,7 @@
   </div>
 
   <footer class="footer mt-auto">
-    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.0.9</p>
+    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.1.2</p>
   </footer>
 
 </template>
@@ -105,6 +114,8 @@ export default {
       pdf_page: "",
       rotate_angle: "",
       pdf_isToDoAll: true,
+      connectInputPathMapping:"",
+      input_isConnectFile:false,
       str_columns: [],
       val_columns: [],
       angle_list: [
@@ -118,6 +129,22 @@ export default {
 
   },
   watch: {
+    input_isConnectFile:{
+      handler(val) {
+        if (typeof window.Alteryx !== 'undefined') {
+          window.Alteryx.Gui.Manager.getDataItem("input_isConnectFile").setValue(val)
+        }
+      },
+      deep: true
+    },
+    connectInputPathMapping:{
+      handler(val) {
+        if (typeof window.Alteryx !== 'undefined') {
+          window.Alteryx.Gui.Manager.getDataItem("connectInputPathMapping").setValue(val)
+        }
+      },
+      deep: true
+    },
     rotate_angle: {
       handler(val) {
         if (typeof window.Alteryx !== 'undefined') {
@@ -186,6 +213,10 @@ export default {
           manager.addDataItem(pdf_page)
           var pdf_isToDoAll = new AlteryxDataItems.SimpleBool('pdf_isToDoAll')
           manager.addDataItem(pdf_isToDoAll)
+          var connectInputPathMapping = new AlteryxDataItems.SimpleString('connectInputPathMapping')
+          manager.addDataItem(connectInputPathMapping)
+          var input_isConnectFile = new AlteryxDataItems.SimpleString('input_isConnectFile')
+          manager.addDataItem(input_isConnectFile)
           var pdf_path = new AlteryxDataItems.SimpleString('pdf_path')
           manager.addDataItem(pdf_path)
           // Bind to Checkbox widget
@@ -197,12 +228,20 @@ export default {
           this.rotate_angle = manager.getDataItem("rotate_angle").getValue()
           this.pdf_page = manager.getDataItem("pdf_page").getValue()
           this.pdf_isToDoAll = manager.getDataItem("pdf_isToDoAll").getValue()
-          //Load Income Field
-          // let str_type = ["String", "WString", "V_String", "V_WString", "Date", "Time", "DateTime"]
-          // let val_type = ["Byte", "Int16", "Int32", "Int64", "FixedDecimal", "Float", "Double"]
-          // let incomingFields = manager.getIncomingFields()
-          // this.str_columns = incomingFields.filter(item => str_type.indexOf(item.strType) > -1).map(item => item.strName)
-          // this.val_columns = incomingFields.filter(item => val_type.indexOf(item.strType) > -1).map(item => item.strName)
+          this.connectInputPathMapping = manager.getDataItem("connectInputPathMapping").getValue()
+          this.input_isConnectFile = manager.getDataItem("input_isConnectFile").getValue()
+          // Load Income Field
+          let str_type = ["String", "WString", "V_String", "V_WString", "Date", "Time", "DateTime"]
+          let val_type = ["Byte", "Int16", "Int32", "Int64", "FixedDecimal", "Float", "Double"]
+          let incomingFields = manager.getIncomingFields()
+          this.str_columns = incomingFields.filter(item => str_type.indexOf(item.strType) > -1).map(item => item.strName)
+          this.val_columns = incomingFields.filter(item => val_type.indexOf(item.strType) > -1).map(item => item.strName)
+          if ((this.str_columns.length + this.val_columns.length) === 0) {
+            this.input_isConnectFile = false;
+          }
+          else{
+            this.input_isConnectFile = true;
+          }
         }.bind(this)
       }.bind(this)
       //Load Script
@@ -214,7 +253,7 @@ export default {
     //   try {
     //     //是否連接資料
     //     if ((this.str_columns.length + this.val_columns.length) === 0) {
-    //       throw `未連接pdf檔案 !`
+    //       throw `連結的檔案欄位為空 !`
     //     }
     //     return true
     //   } catch (err) {
