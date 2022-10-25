@@ -20,6 +20,29 @@
             <label for="exampleFormControlInput1" class="form-label"><b>
                 <BIconFiles style="vertical-align:text-top;" class="icon" />本元件將所選之PDF檔進行特定角度的翻轉。
               </b></label>
+            <button type="button" class="btn" style="padding:0px;" v-on:click="help_1 = !help_1">
+              <span v-if="!help_1"><BIconEyeFill style="vertical-align:text-top;" class="icon" /> 檢視教學</span>
+              <span v-if="help_1"><BIconEyeSlashFill style="vertical-align:text-top;" class="icon" /> 隱藏教學</span>
+            </button>
+            <br>
+              <div v-if="help_1">
+                <div class="mb-3" style="display:grid;justify-content:space-around;">
+                  <label class="form-label"><b>1.可於元件前連結其他元件或直接選擇PDF檔案，若您是直接選擇PDF檔案則可跳過2~3步驟。</b></label>
+                  <img src="./step_1_1.png" style="width: 100%;max-width:650px;">
+                </div>
+                <div class="mb-3" style="display:grid;justify-content:space-around;">
+                  <label class="form-label"><b>2.連結輸入資料後，因資料可能包含多個欄位，確認"檔案路徑"欄位。(下圖以資料夾工具為範例，其輸出結果有許多欄位，但只有路徑欄位才是我們需要的，故此處我們選擇 fullpath 完整路徑欄位，提供後續轉置元件處理)</b></label>
+                  <img src="./step_1_2.png" style="width: 100%;max-width:650px;">
+                </div>
+                <div class="mb-3" style="display:grid;justify-content:space-around;">
+                  <label class="form-label"><b>3.選擇欄位。</b></label>
+                  <img src="./step_1_3.png" style="width: 100%;max-width:650px;">
+                </div>
+                <div class="mb-3" style="display:grid;justify-content:space-around;">
+                  <label class="form-label"><b>若前面接的是PDF合併元件，按同樣邏輯，我們選擇路徑欄位 Output Path 即可。</b></label>
+                  <img src="./step_1_4.png" style="width: 100%;max-width:650px;">
+                </div>
+              </div>
             <ayx v-if="input_isConnectFile !== true" data-ui-props='{type:"FileBrowse", widgetId:"pdf_path", browseType:"File", fileTypeFilters: "PDF Files (*.pdf)|*.pdf"}'></ayx>
             <div class="mb-3">
               <label v-if="input_isConnectFile === true" for="exampleFormControlInput1" class="form-label"><b>
@@ -73,7 +96,7 @@
   </div>
 
   <footer class="footer mt-auto">
-    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.1.2</p>
+    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.0</p>
   </footer>
 
 </template>
@@ -116,6 +139,7 @@ export default {
       pdf_isToDoAll: true,
       connectInputPathMapping:"",
       input_isConnectFile:false,
+      help_1:false,
       str_columns: [],
       val_columns: [],
       angle_list: [
@@ -215,7 +239,7 @@ export default {
           manager.addDataItem(pdf_isToDoAll)
           var connectInputPathMapping = new AlteryxDataItems.SimpleString('connectInputPathMapping')
           manager.addDataItem(connectInputPathMapping)
-          var input_isConnectFile = new AlteryxDataItems.SimpleString('input_isConnectFile')
+          var input_isConnectFile = new AlteryxDataItems.SimpleBool('input_isConnectFile')
           manager.addDataItem(input_isConnectFile)
           var pdf_path = new AlteryxDataItems.SimpleString('pdf_path')
           manager.addDataItem(pdf_path)
@@ -230,12 +254,14 @@ export default {
           this.pdf_isToDoAll = manager.getDataItem("pdf_isToDoAll").getValue()
           this.connectInputPathMapping = manager.getDataItem("connectInputPathMapping").getValue()
           this.input_isConnectFile = manager.getDataItem("input_isConnectFile").getValue()
+          
           // Load Income Field
           let str_type = ["String", "WString", "V_String", "V_WString", "Date", "Time", "DateTime"]
           let val_type = ["Byte", "Int16", "Int32", "Int64", "FixedDecimal", "Float", "Double"]
           let incomingFields = manager.getIncomingFields()
           this.str_columns = incomingFields.filter(item => str_type.indexOf(item.strType) > -1).map(item => item.strName)
           this.val_columns = incomingFields.filter(item => val_type.indexOf(item.strType) > -1).map(item => item.strName)
+          
           if ((this.str_columns.length + this.val_columns.length) === 0) {
             this.input_isConnectFile = false;
           }
