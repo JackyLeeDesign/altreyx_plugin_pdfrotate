@@ -149,7 +149,7 @@
             <Field name="input_page" source="TextInput:" type="Byte" />
             <Field name="input_isTodoAll" source="TextInput:" type="Bool" />
             <Field name="input_isConnectFile" source="TextInput:" type="Bool" />
-            <Field name="pwc_input_path" size="43" source="TextInput:" type="WString" />
+            <Field name="pwc_input_path" size="77" source="TextInput:" type="String" />
             <Field name="connect_input_path" size="1073741823" source="TextInput:" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
@@ -194,7 +194,7 @@
           </Fields>
           <Data>
             <r>
-              <c>C:/Users/JYKL/Desktop/明揚.2019_watermark.pdf</c>
+              <c>C:\Users\JYKL\Desktop\Example Workflow\pdf rotate one file demo\test file.pdf</c>
             </r>
           </Data>
         </Configuration>
@@ -205,7 +205,7 @@
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="pwc_input_path" size="43" source="TextInput:" type="WString" />
+            <Field name="pwc_input_path" size="77" source="TextInput:" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -218,7 +218,7 @@
       <Properties>
         <Configuration>
           <WorkflowName>c:\users\jykl\desktop\alteryx\altreyx_ait_components\altreyx_plugin_pdfrotate\alteryx_src\supporting_macros\entry.yxmc</WorkflowName>
-          <JupyterProduction>true</JupyterProduction>
+          <JupyterProduction>false</JupyterProduction>
           <vEnvName>jupytertool_venv</vEnvName>
           <DefaultVenv>1</DefaultVenv>
           <productionModeScript>#################################
@@ -234,10 +234,9 @@ import pandas as pd
 from PyPDF2 import PdfReader
 from PyPDF2 import PdfWriter
 import os
-
-pdf_list = Alteryx.read("#1")
 output_path=""
 try:
+    pdf_list = Alteryx.read("#1")
     input_page = pdf_list['input_page'].iloc[0]
     input_rotate = pdf_list['input_rotate'].iloc[0]
     input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]
@@ -305,7 +304,6 @@ try:
                 # 頁數字串轉數字
                 for index in range(len(toDoPage)):
                     toDoPage[index] = int(toDoPage[index])
-
                 # 去除重複頁數
                 toDoPage = list(set(toDoPage))
 
@@ -340,6 +338,7 @@ try:
             resultData.at[file_num, "Message"] = ""
             resultData.at[file_num, "Output Path"] = output_path
             print("Success:" + input_path[file_num])
+
         except Exception as e:
             # 顯示成功與否
             resultData.at[file_num, "Status"] = "Failure"
@@ -376,11 +375,11 @@ Alteryx.write(resultData,1)
 
 #################################
 </productionModeScript>
-          <Port>53405</Port>
+          <Port>62765</Port>
           <JupyterGuidDir>7640bca0-2c13-4d2c-8f32-4b068e3c7c0c</JupyterGuidDir>
           <JupyterGuidCopy />
           <LastExecutedByEngineVersion>2020.4.5.12471</LastExecutedByEngineVersion>
-          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"},"scrolled":false},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","Package.installPackages(package=['pandas','PyPDF2'], install_type=\"install --user\")"]},{"cell_type":"code","execution_count":4,"metadata":{"scrolled":true},"outputs":[],"source":["from ayx import Alteryx\n","import pandas as pd\n","from PyPDF2 import PdfReader\n","from PyPDF2 import PdfWriter\n","import os\n","\n","pdf_list = Alteryx.read(\"#1\")\n","output_path=\"\"\n","try:\n","    input_page = pdf_list['input_page'].iloc[0]\n","    input_rotate = pdf_list['input_rotate'].iloc[0]\n","    input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]\n","    input_isConnectFile = pdf_list['input_isConnectFile'].iloc[0]\n","    if (input_isConnectFile==True):\n","        input_path = pdf_list['connect_input_path']\n","    else:\n","        input_path = pdf_list['pwc_input_path']\n","    # 建立pandas表格資料,最後輸出該表\n","    resultTemplate = {\n","        \"File\":input_path\n","    }\n","    resultData = pd.DataFrame(resultTemplate)\n","    for file_num in range(len(input_path)):\n","        try:\n","            isExist = os.path.exists(input_path[file_num])\n","            if(isExist == False):\n","                raise Exception(\"該檔案不存在，或路徑輸入錯誤，請確認後再重新執行 ! \"+input_path[file_num])\n","            file = os.path.splitext(input_path[file_num])[0]\n","            ext = os.path.splitext(input_path[file_num])[1]\n","            pdfRead = open(input_path[file_num], 'rb')\n","            reader = PdfReader(pdfRead, strict=False)\n","            writer = PdfWriter()\n","\n","            arrangeInputData = str(input_page).replace(\" \",\"\").split(\",\")\n","            isTodoAll = input_isTodoAll\n","            rotate = input_rotate\n","            toDoPage=[]\n","\n","            if(isTodoAll):\n","                for pageNum in range(reader.numPages):\n","                    page = reader.getPage(pageNum)\n","                    page.rotateClockwise(rotate)\n","                    writer.addPage(page)\n","            else:\n","                # 分析待處理頁數，將1-3拆成1,2,3\n","                for index in range(len(arrangeInputData)):\n","                    if(len(str(arrangeInputData[index]))==0):\n","                        continue\n","                    if('-' in str(arrangeInputData[index])):\n","                        startAndEndPage = str(arrangeInputData[index]).split('-')\n","                        startPage = \"\"\n","                        endPage = \"\"\n","                        # 起始頁與結束頁未輸入時, 始頁自動更改為第一頁, 結束頁自動取pdf最後一頁\n","                        if(len(str(startAndEndPage[0]))==0):\n","                            startAndEndPage[0]=1\n","                        if(len(str(startAndEndPage[1]))==0):\n","                            startAndEndPage[1]=reader.numPages\n","\n","                        # 判斷起始頁和結束頁\n","                        if(int(startAndEndPage[0])<int(startAndEndPage[1])):\n","                            startPage = startAndEndPage[0]\n","                            endPage = startAndEndPage[1]\n","                        else:\n","                            startPage = startAndEndPage[1]\n","                            endPage = startAndEndPage[0]\n","                        \n","                        # 展開並寫入至待處理頁數\n","                        for addPageNum in range(int(startPage),int(endPage)+1):\n","                            # 頁數字串轉數字\n","                            toDoPage.append(int(addPageNum))\n","                    else:\n","                        toDoPage.append(int(arrangeInputData[index]))\n","                \n","                # 頁數字串轉數字\n","                for index in range(len(toDoPage)):\n","                    toDoPage[index] = int(toDoPage[index])\n","\n","                # 去除重複頁數\n","                toDoPage = list(set(toDoPage))\n","\n","\n","                # 獲取最大頁數\n","                maxPageNum = max(toDoPage)\n","\n","                # 判斷輸入頁數是否超過檔案頁數\n","                if(maxPageNum > reader.numPages):\n","                    raise Exception(\"您輸入的頁數已超過檔案最大頁數，請更改頁數範圍後再執行\")\n","\n","                # 處理指定頁數 \n","                for pageNum in range(reader.numPages):\n","                    page = reader.getPage(pageNum)\n","                    if((pageNum+1) in toDoPage):\n","                        page.rotateClockwise(rotate)\n","                    writer.addPage(page)\n","            # pdfWriter.encrypt(password)\n","            output_path = f'{file}_rotated{ext}'\n","            i = 2\n","            while os.path.exists(output_path):\n","                output_path = f'{file}_rotated{i}{ext}'\n","                i += 1\n","\n","            pdfOut = open(output_path, 'wb')\n","            writer.write(pdfOut)\n","            pdfOut.close()\n","            pdfRead.close()\n","\n","            # 顯示成功與否\n","            resultData.at[file_num, \"Status\"] = \"Success\"\n","            resultData.at[file_num, \"Message\"] = \"\"\n","            resultData.at[file_num, \"Output Path\"] = output_path\n","            print(\"Success:\" + input_path[file_num])\n","        except Exception as e:\n","            # 顯示成功與否\n","            resultData.at[file_num, \"Status\"] = \"Failure\"\n","            resultData.at[file_num, \"Message\"] = str(e)\n","            resultData.at[file_num, \"Output Path\"] = \"\"\n","            if(output_path and os.path.exists(output_path)):\n","                os.remove(output_path)\n","except Exception as e:\n","    print (e.args[0])\n","    # if(e.args[0])\n","    resultData[\"Status\"] = \"Failure\"\n","    resultData[\"Message\"] = \"Alteryx解析PDF過程發生錯誤，請與AI&T 同仁聯繫(\"+str(e)+\")\"\n","    resultData[\"Output Path\"] = \"\"\n","    if(output_path and os.path.exists(output_path)):\n","        os.remove(output_path)\n","Alteryx.write(resultData,1)"]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{"scrolled":true},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]}],"metadata":{"kernelspec":{"display_name":"jupytertool_venv","language":"python","name":"jupytertool_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"},"scrolled":false},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","Package.installPackages(package=['pandas','PyPDF2'], install_type=\"install --user\")"]},{"cell_type":"code","execution_count":2,"metadata":{"scrolled":true},"outputs":[],"source":["from ayx import Alteryx\n","import pandas as pd\n","from PyPDF2 import PdfReader\n","from PyPDF2 import PdfWriter\n","import os\n","output_path=\"\"\n","try:\n","    pdf_list = Alteryx.read(\"#1\")\n","    input_page = pdf_list['input_page'].iloc[0]\n","    input_rotate = pdf_list['input_rotate'].iloc[0]\n","    input_isTodoAll = pdf_list['input_isTodoAll'].iloc[0]\n","    input_isConnectFile = pdf_list['input_isConnectFile'].iloc[0]\n","    if (input_isConnectFile==True):\n","        input_path = pdf_list['connect_input_path']\n","    else:\n","        input_path = pdf_list['pwc_input_path']\n","    # 建立pandas表格資料,最後輸出該表\n","    resultTemplate = {\n","        \"Source File\":input_path\n","    }\n","    resultData = pd.DataFrame(resultTemplate)\n","    for file_num in range(len(input_path)):\n","        try:\n","            isExist = os.path.exists(input_path[file_num])\n","            if(isExist == False):\n","                raise Exception(\"該檔案不存在，或路徑輸入錯誤，請確認後再重新執行 ! \"+input_path[file_num])\n","            file = os.path.splitext(input_path[file_num])[0]\n","            ext = os.path.splitext(input_path[file_num])[1]\n","            pdfRead = open(input_path[file_num], 'rb')\n","            reader = PdfReader(pdfRead, strict=False)\n","            writer = PdfWriter()\n","\n","            arrangeInputData = str(input_page).replace(\" \",\"\").split(\",\")\n","            isTodoAll = input_isTodoAll\n","            rotate = input_rotate\n","            toDoPage=[]\n","\n","            if(isTodoAll):\n","                for pageNum in range(reader.numPages):\n","                    page = reader.getPage(pageNum)\n","                    page.rotateClockwise(rotate)\n","                    writer.addPage(page)\n","            else:\n","                # 分析待處理頁數，將1-3拆成1,2,3\n","                for index in range(len(arrangeInputData)):\n","                    if(len(str(arrangeInputData[index]))==0):\n","                        continue\n","                    if('-' in str(arrangeInputData[index])):\n","                        startAndEndPage = str(arrangeInputData[index]).split('-')\n","                        startPage = \"\"\n","                        endPage = \"\"\n","                        # 起始頁與結束頁未輸入時, 始頁自動更改為第一頁, 結束頁自動取pdf最後一頁\n","                        if(len(str(startAndEndPage[0]))==0):\n","                            startAndEndPage[0]=1\n","                        if(len(str(startAndEndPage[1]))==0):\n","                            startAndEndPage[1]=reader.numPages\n","\n","                        # 判斷起始頁和結束頁\n","                        if(int(startAndEndPage[0])<int(startAndEndPage[1])):\n","                            startPage = startAndEndPage[0]\n","                            endPage = startAndEndPage[1]\n","                        else:\n","                            startPage = startAndEndPage[1]\n","                            endPage = startAndEndPage[0]\n","                        \n","                        # 展開並寫入至待處理頁數\n","                        for addPageNum in range(int(startPage),int(endPage)+1):\n","                            # 頁數字串轉數字\n","                            toDoPage.append(int(addPageNum))\n","                    else:\n","                        toDoPage.append(int(arrangeInputData[index]))\n","                \n","                # 頁數字串轉數字\n","                for index in range(len(toDoPage)):\n","                    toDoPage[index] = int(toDoPage[index])\n","                # 去除重複頁數\n","                toDoPage = list(set(toDoPage))\n","\n","\n","                # 獲取最大頁數\n","                maxPageNum = max(toDoPage)\n","\n","                # 判斷輸入頁數是否超過檔案頁數\n","                if(maxPageNum > reader.numPages):\n","                    raise Exception(\"您輸入的頁數已超過檔案最大頁數，請更改頁數範圍後再執行\")\n","\n","                # 處理指定頁數 \n","                for pageNum in range(reader.numPages):\n","                    page = reader.getPage(pageNum)\n","                    if((pageNum+1) in toDoPage):\n","                        page.rotateClockwise(rotate)\n","                    writer.addPage(page)\n","            # pdfWriter.encrypt(password)\n","            output_path = f'{file}_rotated{ext}'\n","            i = 2\n","            while os.path.exists(output_path):\n","                output_path = f'{file}_rotated{i}{ext}'\n","                i += 1\n","\n","            pdfOut = open(output_path, 'wb')\n","            writer.write(pdfOut)\n","            pdfOut.close()\n","            pdfRead.close()\n","\n","            # 顯示成功與否\n","            resultData.at[file_num, \"Status\"] = \"Success\"\n","            resultData.at[file_num, \"Message\"] = \"\"\n","            resultData.at[file_num, \"Output Path\"] = output_path\n","            print(\"Success:\" + input_path[file_num])\n","\n","        except Exception as e:\n","            # 顯示成功與否\n","            resultData.at[file_num, \"Status\"] = \"Failure\"\n","            resultData.at[file_num, \"Message\"] = str(e)\n","            resultData.at[file_num, \"Output Path\"] = \"\"\n","            if(output_path and os.path.exists(output_path)):\n","                os.remove(output_path)\n","except Exception as e:\n","    print (e.args[0])\n","    # if(e.args[0])\n","    resultData[\"Status\"] = \"Failure\"\n","    resultData[\"Message\"] = \"Alteryx解析PDF過程發生錯誤，請與AI&T 同仁聯繫(\"+str(e)+\")\"\n","    resultData[\"Output Path\"] = \"\"\n","    if(output_path and os.path.exists(output_path)):\n","        os.remove(output_path)\n","Alteryx.write(resultData,1)"]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{"scrolled":true},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]},{"cell_type":"code","execution_count":null,"metadata":{},"outputs":[],"source":[]}],"metadata":{"kernelspec":{"display_name":"jupytertool_venv","language":"python","name":"jupytertool_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -389,7 +388,7 @@ Alteryx.write(resultData,1)
         </Annotation>
         <MetaInfo connection="Output1">
           <RecordInfo>
-            <Field name="File" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Source File" size="1073741823" source="PythonTool:" type="V_WString" />
             <Field name="Status" size="1073741823" source="PythonTool:" type="V_WString" />
             <Field name="Message" size="1073741823" source="PythonTool:" type="V_WString" />
             <Field name="Output Path" size="1073741823" source="PythonTool:" type="V_WString" />
@@ -462,7 +461,7 @@ Alteryx.write(resultData,1)
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="pwc_input_path" size="43" source="TextInput:" type="WString" />
+            <Field name="pwc_input_path" size="77" source="TextInput:" type="String" />
             <Field name="connect_input_path" size="1073741823" source="TextInput:" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
@@ -540,7 +539,7 @@ Alteryx.write(resultData,1)
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="File" size="1073741823" source="PythonTool:" type="V_WString" />
+            <Field name="Source File" size="1073741823" source="PythonTool:" type="V_WString" />
             <Field name="Status" size="1073741823" source="PythonTool:" type="V_WString" />
             <Field name="Message" size="1073741823" source="PythonTool:" type="V_WString" />
             <Field name="Output Path" size="1073741823" source="PythonTool:" type="V_WString" />
@@ -802,12 +801,6 @@ Alteryx.write(resultData,1)
       <Constant>
         <Namespace>Question</Namespace>
         <Name>connectInputPathMapping</Name>
-        <Value />
-        <IsNumeric value="False" />
-      </Constant>
-      <Constant>
-        <Namespace>Question</Namespace>
-        <Name>Input</Name>
         <Value />
         <IsNumeric value="False" />
       </Constant>
