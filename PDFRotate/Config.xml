@@ -2,9 +2,9 @@
 <AlteryxJavaScriptPlugin>
   <Properties>
     <MetaInfo>
-      <Name>PDF轉置</Name>
-      <Description>將PDF檔案向右翻轉指定角度。</Description>
-      <ToolVersion>0.2.1</ToolVersion>
+      <Name>PDF 轉置</Name>
+      <Description>將 PDF 檔案向右翻轉指定角度。</Description>
+      <ToolVersion>0.2.3</ToolVersion>
       <CategoryName>PwC DEV Tools Test</CategoryName>
       <Author>Assurance Innovation and Transformation</Author>
       <Icon>PDFRotate/icon.png</Icon>

@@ -15,10 +15,10 @@
       <div class="col">
         <!-- 第一步 -->
         <div class="card" style="margin-top:10px;">
-          <div class="card-header d-flex justify-content-between align-items-center"><b>Step1：請選擇PDF檔案：</b></div>
+          <div class="card-header d-flex justify-content-between align-items-center"><b>Step1：請選擇 PDF 檔案：</b></div>
           <div class="card-body" style="overflow-x:auto;">
             <label for="exampleFormControlInput1" class="form-label"><b>
-                <BIconFiles style="vertical-align:text-top;" class="icon" />本元件將所選之PDF檔進行特定角度的翻轉。
+                <BIconFiles style="vertical-align:text-top;" class="icon" />本元件將所選之 PDF 檔進行特定角度的翻轉。
               </b></label>
             <button type="button" class="btn" style="padding:0px;" v-on:click="help_1 = !help_1">
               <span v-if="!help_1"><BIconEyeFill style="vertical-align:text-top;" class="icon" /> 檢視教學</span>
@@ -27,7 +27,7 @@
             <br>
               <div v-if="help_1">
                 <div class="mb-3" style="display:grid;justify-content:space-around;">
-                  <label class="form-label"><b>1.可於元件前連結其他元件或直接選擇PDF檔案，若您是直接選擇PDF檔案則可跳過2~3步驟。</b></label>
+                  <label class="form-label"><b>1.可於元件前連結其他元件或直接選擇 PDF 檔案，若您是直接選擇 PDF 檔案則可跳過 2~3 步驟。</b></label>
                   <img src="./step_1_1.png" style="width: 100%;max-width:650px;">
                 </div>
                 <div class="mb-3" style="display:grid;justify-content:space-around;">
@@ -39,14 +39,14 @@
                   <img src="./step_1_3.png" style="width: 100%;max-width:650px;">
                 </div>
                 <div class="mb-3" style="display:grid;justify-content:space-around;">
-                  <label class="form-label"><b>若前面接的是PDF合併元件，按同樣邏輯，我們選擇路徑欄位 Output Path 即可。</b></label>
+                  <label class="form-label"><b>若前面接的是 PDF 合併元件，按同樣邏輯，我們選擇路徑欄位 Output Path 即可。</b></label>
                   <img src="./step_1_4.png" style="width: 100%;max-width:650px;">
                 </div>
               </div>
             <ayx v-if="input_isConnectFile !== true" data-ui-props='{type:"FileBrowse", widgetId:"pdf_path", browseType:"File", fileTypeFilters: "PDF Files (*.pdf)|*.pdf"}'></ayx>
             <div class="mb-3">
               <label v-if="input_isConnectFile === true" for="exampleFormControlInput1" class="form-label"><b>
-                  <BIconColumns style="vertical-align:text-top;" class="icon" />根據您所連接的檔案，請選擇其路徑欄位
+                  <BIconColumns style="vertical-align:text-top;" class="icon" />根據您所連接的檔案，請選擇其輸出路徑 (Output) 欄位
                 </b></label>
                 <select v-if="input_isConnectFile === true" class="form-control" v-model="connectInputPathMapping">
                   <option disabled value="">選擇欄位</option>
@@ -96,7 +96,7 @@
   </div>
 
   <footer class="footer mt-auto">
-    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.1</p>
+    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.3</p>
   </footer>
 
 </template>
