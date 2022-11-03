@@ -96,7 +96,7 @@
   </div>
 
   <footer class="footer mt-auto">
-    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.3</p>
+    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.5</p>
   </footer>
 
 </template>
