@@ -96,7 +96,8 @@
   </div>
 
   <footer class="footer mt-auto">
-    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.5</p>
+    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.6</p>
+    <p class="text-muted" style="margin: 0px;text-align: center; font-size:10px;">Copyright © 2001-2022 Python Software Foundation; All Rights Reserved.</p>
   </footer>
 
 </template>
@@ -262,6 +263,18 @@ export default {
           this.str_columns = incomingFields.filter(item => str_type.indexOf(item.strType) > -1).map(item => item.strName)
           this.val_columns = incomingFields.filter(item => val_type.indexOf(item.strType) > -1).map(item => item.strName)
           
+          if (this.connectInputPathMapping.length==0) {
+            if(this.str_columns.includes("FullPath")){
+              this.connectInputPathMapping = "FullPath"
+            }
+            else if(this.str_columns.includes("Output Path")){
+              this.connectInputPathMapping = "Output Path"
+            }
+            else{
+              this.connectInputPathMapping = ""
+            }
+          }
+
           if ((this.str_columns.length + this.val_columns.length) === 0) {
             this.input_isConnectFile = false;
           }
