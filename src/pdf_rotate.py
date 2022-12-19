@@ -24,17 +24,24 @@ try:
         input_path = pdf_list['pwc_input_path']
     # 建立pandas表格資料,最後輸出該表
     resultTemplate = {
-        "Source File":input_path
+        "Source File":input_path,
+        "Status":"",
+        "Message":"",
+        "Output Path":""
     }
     resultData = pd.DataFrame(resultTemplate)
+
     for file_num in range(len(input_path)):
         try:
             output_path=""
             isExist = os.path.exists(input_path[file_num])
             if(isExist == False):
-                raise Exception("該檔案不存在，或路徑輸入錯誤，請確認後再重新執行 ! "+input_path[file_num])
+                raise Exception("該檔案不存在，或路徑輸入錯誤，請確認後再重新執行 ! ")
             file = os.path.splitext(input_path[file_num])[0]
             ext = os.path.splitext(input_path[file_num])[1]
+            if(ext != ".pdf"):
+                # raise Exception("該檔案非 PDF 檔，故不處理 ! ")
+                continue
             pdfRead = open(input_path[file_num], 'rb')
             reader = PdfReader(pdfRead, strict=False)
             writer = PdfWriter()
@@ -113,7 +120,7 @@ try:
 
             # 顯示成功與否
             resultData.at[file_num, "Status"] = "Success"
-            resultData.at[file_num, "Message"] = ""
+            resultData.at[file_num, "Message"] = "-"
             resultData.at[file_num, "Output Path"] = output_path
             print("Success:" + input_path[file_num])
 
@@ -121,14 +128,15 @@ try:
             # 顯示成功與否
             resultData.at[file_num, "Status"] = "Failure"
             resultData.at[file_num, "Message"] = str(e)
-            resultData.at[file_num, "Output Path"] = ""
+            resultData.at[file_num, "Output Path"] = "-"
             if(output_path and os.path.exists(output_path)):
                 os.remove(output_path)
 except Exception as e:
     # if(e.args[0])
     resultData["Status"] = "Failure"
     resultData["Message"] = "Alteryx 解析 PDF 過程發生錯誤，請與 AI&T 同仁聯繫("+str(e)+")"
-    resultData["Output Path"] = ""
+    resultData["Output Path"] = "-"
     if(output_path and os.path.exists(output_path)):
         os.remove(output_path)
 Alteryx.write(resultData,1)
+# Copyright © 2001-2022 Python Software Foundation; All Rights Reserved.

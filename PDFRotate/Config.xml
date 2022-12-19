@@ -4,7 +4,7 @@
     <MetaInfo>
       <Name>PDF 轉置</Name>
       <Description>將 PDF 檔案向右翻轉指定角度。(註:請關閉所有正在執行之工具 workflow，再執行安裝)</Description>
-      <ToolVersion>0.2.6</ToolVersion>
+      <ToolVersion>0.2.9</ToolVersion>
       <CategoryName>PwC DEV Tools Test</CategoryName>
       <Author>Assurance Innovation and Transformation</Author>
       <Icon>PDFRotate/icon.png</Icon>
