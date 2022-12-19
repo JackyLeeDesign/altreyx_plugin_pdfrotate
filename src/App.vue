@@ -104,7 +104,7 @@
   </div>
 
   <footer class="footer mt-auto">
-    <p class="text-muted" style="margin: 0px;text-align: center;">版本：0.2.9</p>
+    <p class="text-muted" style="margin: 0px;text-align: center;">版本：1.0.0</p>
     <!-- pdf_page:{{pdf_page}},
     rotate_angle:{{rotate_angle}},
     pdf_isToDoAll:{{pdf_isToDoAll}},
@@ -212,7 +212,7 @@ export default {
           //判斷是否為數字或"-"
           if (isNaN(page.replaceAll("-", "")) == true || page.includes('.') || page.includes('　') || page.includes(' ')) {
             console.log(page)
-            alert("頁數必須為數字")
+            alert("頁數必須為數字 (請注意全形/半形之切換)")
             this.$refs.inputPage.focus();
             this.pdf_page = oldVal
             return;
