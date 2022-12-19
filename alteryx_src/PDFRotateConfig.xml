@@ -3,9 +3,9 @@
   <EngineSettings EngineDllEntryPoint="PDFRotate\Supporting_Macros\entry.yxmc" EngineDll="Macro" SDKVersion="10.1" />
   
   <GuiSettings Help="" Html="index.html" Icon="icon.png" SDKVersion="10.1">
-    <!-- <InputConnections>
+    <InputConnections>
       <Connection Name="Input" AllowMultiple="False" Optional="False" Type="Connection" Label="I"/>
-    </InputConnections> -->
+    </InputConnections>
     <OutputConnections>
       <Connection Name="Output" AllowMultiple="False" Optional="False" Type="Connection" Label="O"/>
     </OutputConnections>
@@ -13,11 +13,11 @@
 
   <Properties>
     <MetaInfo>
-      <Name>PDF轉置</Name>
-      <Description>將PDF檔案向右翻轉指定角度。</Description>
-      <CategoryName>PwC DEV Tools Test</CategoryName>
+      <Name>PDF 轉置</Name>
+      <Description>將 PDF 檔案向右翻轉指定角度。</Description>
+      <CategoryName>PwC Data Tools</CategoryName>
       <SearchTags>pwc</SearchTags>
-      <ToolVersion>1.0.0</ToolVersion>
+      <ToolVersion>0.2.9</ToolVersion>
       <Author>​Assurance Innovation and Transformation</Author>
       <Company>PricewaterhouseCoopers Taiwan</Company>
       <Copyright>PricewaterhouseCoopers Taiwan 2021</Copyright>
