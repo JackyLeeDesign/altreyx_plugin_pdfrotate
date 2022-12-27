@@ -2,7 +2,7 @@
 # script here (only missing packages will be installed)
 from ayx import Package
 try:
-    Package.installPackages(package=['pandas','PyPDF2'], install_type="install --user")
+    Package.installPackages(package=['pandas','PyPDF2==2.11.0'], install_type="install --user")
 except:
     pass
 
